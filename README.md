@@ -9,11 +9,14 @@ Eurorack form factor
 ### Errata
 ### Workarounds
 
-## Base Construction
-### Arduino base board 
- - Arduino Nano
- - Gate 1 and Gate 2 as Mini Jacks (PJ-301) 5V
- - Gate 3 and Gate 4 as Mini Jacks (PJ-321) with fixed x2 amplification and sallen-key LP 2nd order filter
+## Base Construction 
+### Distortion base board 
+ - 10pin Europower connector
+ - Barreljack for 7-12V digital Pwr
+### PT2399 base board 
+ - 10pin Europower connector
+ - Barreljack for 7-12V digital Pwr
+### Arduino Bitcrusher
  - 10pin Europower connector
  - Barreljack for 7-12V digital Pwr
  
@@ -24,8 +27,12 @@ Eurorack form factor
 
 ## Vital Components
  - Arduino Nano
+ - PT2399
+ - Mini Jacks (PJ-301)
+ - Mini Jacks (PJ-321) 
  - ALPS RV09 potentiometer
  - TL072 or similar dual op amp
+ - Diode clipping (silicium signal diodes, LED, power, shottkey, germanium
  
 ### Mechanical
 ![](EU1-MK1-mechanical.png)
