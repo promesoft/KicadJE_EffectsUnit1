@@ -24,6 +24,7 @@ Eurorack form factor
  
 ![](KicadJE-EU1-MK1-RevA-Top3D.png)
 
+![](KicadJE-EffectsUnit1.lib.png)
 
 ## Vital Components
  - Arduino Nano
