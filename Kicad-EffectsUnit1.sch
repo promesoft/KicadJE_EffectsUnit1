@@ -650,8 +650,8 @@ L Device:R_POT RV102
 U 1 1 5C7A3722
 P 5375 3400
 F 0 "RV102" H 5305 3446 50  0000 R CNN
-F 1 "10k" H 5305 3355 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical" H 5375 3400 50  0001 C CNN
+F 1 "10k_O11" H 5305 3355 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_China_RK09_Single_Vertical_AJ" H 5375 3400 50  0001 C CNN
 F 3 "~" H 5375 3400 50  0001 C CNN
 	1    5375 3400
 	0    -1   -1   0   
@@ -661,8 +661,8 @@ L Device:R_POT RV101
 U 1 1 5C7A37D8
 P 5325 2225
 F 0 "RV101" V 5525 2300 50  0000 R CNN
-F 1 "10k" V 5425 2200 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical" H 5325 2225 50  0001 C CNN
+F 1 "10k_O10" V 5425 2200 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_China_RK09_Single_Vertical_AJ" H 5325 2225 50  0001 C CNN
 F 3 "~" H 5325 2225 50  0001 C CNN
 	1    5325 2225
 	0    -1   -1   0   
@@ -2107,8 +2107,8 @@ $Comp
 L Switch:SW_DPDT_x2 SW101
 U 1 1 5D077A76
 P 5325 2400
-F 0 "SW101" H 5325 2685 50  0000 C CNN
-F 1 "Dist 10" H 5325 2594 50  0000 C CNN
+F 0 "SW101" H 5400 2400 50  0000 C CNN
+F 1 "Dist 10" H 5375 2325 50  0000 C CNN
 F 2 "AJ-Dropbox-Kicad:SPDTx2" H 5325 2400 50  0001 C CNN
 F 3 "~" H 5325 2400 50  0001 C CNN
 	1    5325 2400
@@ -2338,8 +2338,8 @@ L Device:R_POT RV103
 U 1 1 5D3BA6BE
 P 5125 5050
 F 0 "RV103" H 5055 5096 50  0000 R CNN
-F 1 "100k" H 5055 5005 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical" H 5125 5050 50  0001 C CNN
+F 1 "100k_O12" H 5055 5005 50  0000 R CNN
+F 2 "Potentiometer_THT:Potentiometer_China_RK09_Single_Vertical_AJ" H 5125 5050 50  0001 C CNN
 F 3 "~" H 5125 5050 50  0001 C CNN
 	1    5125 5050
 	0    -1   1    0   
