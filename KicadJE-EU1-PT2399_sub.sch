@@ -267,6 +267,8 @@ $Comp
 L Eurorack:HEADER_2x5_Doepfer P201
 U 1 1 5D631512
 P 2800 1350
+AR Path="/5D631512" Ref="P201"  Part="1" 
+AR Path="/5D60ED9A/5D631512" Ref="P201"  Part="1" 
 F 0 "P201" H 2800 852 40  0000 C CNN
 F 1 "HEADER_2x5_Doepfer" H 2800 928 40  0000 C CNN
 F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 2800 1019 60  0000 C CNN

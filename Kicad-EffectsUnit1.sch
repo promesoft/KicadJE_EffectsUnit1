@@ -181,12 +181,12 @@ F 3 "~" H 1675 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Barrel_Jack J103
+L Connector:Barrel_Jack_Switch J103
 U 1 1 5C22F3A0
 P 875 1050
 F 0 "J103" H 930 1375 50  0000 C CNN
 F 1 "Vin 7-12v" H 930 1284 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 925 1010 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 925 1010 50  0001 C CNN
 F 3 "~" H 925 1010 50  0001 C CNN
 	1    875  1050
 	1    0    0    -1  
@@ -2466,4 +2466,9 @@ U 5D60ED9A
 F0 "KicadJE-EU1-PT2399" 50
 F1 "KicadJE-EU1-PT2399_sub.sch" 50
 $EndSheet
+Wire Wire Line
+	1175 1050 1500 1050
+Wire Wire Line
+	1500 1050 1500 1150
+Connection ~ 1500 1150
 $EndSCHEMATC
