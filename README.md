@@ -10,6 +10,8 @@ Eurorack form factor
 ### Workarounds
 
 ## Base Construction 
+The idea is to have 3 different units.
+Practically it may be required to fit the bitcrusher and the distortion in one unit.
 ### Distortion base board 
  - 10pin Europower connector
  - Barreljack for 7-12V digital Pwr
