@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\anders\Documents\KiCad\Projects\KicadJE_EffectsUnit1\Kicad-EffectsUnit1.sch)
-    (date "24/02/2019 17:22:16")
+    (date "24/02/2019 17:25:11")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -745,7 +745,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 5D2347C8))
     (comp (ref SW105)
-      (value "Dist 12")
+      (value "Dist 10")
       (footprint AJ-Dropbox-Kicad:SPDTx2)
       (libsource (lib Switch) (part SW_DPDT_x2) (description "Switch, dual pole double throw, separate symbols"))
       (sheetpath (names /) (tstamps /))
