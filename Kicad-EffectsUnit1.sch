@@ -137,17 +137,6 @@ Wire Wire Line
 Wire Wire Line
 	950  2425 750  2425
 $Comp
-L Connector_Generic:Conn_01x06 J110
-U 1 1 5C21A17B
-P 2650 5375
-F 0 "J110" H 2750 5475 50  0000 L CNN
-F 1 "Power Conn" H 2450 5625 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 2650 5375 50  0001 C CNN
-F 3 "~" H 2650 5375 50  0001 C CNN
-	1    2650 5375
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0116
 U 1 1 5C2240E9
 P 2125 5600
@@ -158,47 +147,6 @@ F 3 "" H 2125 5600 50  0001 C CNN
 	1    2125 5600
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C102
-U 1 1 5C22F1AA
-P 2050 1050
-F 0 "C102" H 2165 1096 50  0000 L CNN
-F 1 "100n" H 2165 1005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2088 900 50  0001 C CNN
-F 3 "~" H 2050 1050 50  0001 C CNN
-	1    2050 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C101
-U 1 1 5C22F286
-P 1675 1050
-F 0 "C101" H 1793 1096 50  0000 L CNN
-F 1 "100uF" H 1793 1005 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1713 900 50  0001 C CNN
-F 3 "~" H 1675 1050 50  0001 C CNN
-	1    1675 1050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Barrel_Jack_Switch J103
-U 1 1 5C22F3A0
-P 875 1050
-F 0 "J103" H 930 1375 50  0000 C CNN
-F 1 "Vin 7-12v" H 930 1284 50  0000 C CNN
-F 2 "Connector_BarrelJack:BarrelJack_Horizontal" H 925 1010 50  0001 C CNN
-F 3 "~" H 925 1010 50  0001 C CNN
-	1    875  1050
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1500 950  1500 900 
-Connection ~ 2050 900 
-Wire Wire Line
-	1500 1150 1500 1200
-Wire Wire Line
-	1500 1200 1675 1200
-Connection ~ 2050 1200
 $Comp
 L Device:C C116
 U 1 1 5C289E13
@@ -222,28 +170,6 @@ F 3 "~" H 1650 4625 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR0102
-U 1 1 5C2979FB
-P 2050 900
-F 0 "#PWR0102" H 2050 750 50  0001 C CNN
-F 1 "VCC" H 2067 1073 50  0000 C CNN
-F 2 "" H 2050 900 50  0001 C CNN
-F 3 "" H 2050 900 50  0001 C CNN
-	1    2050 900 
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:PWR_FLAG #FLG0101
-U 1 1 5C297A7B
-P 1675 900
-F 0 "#FLG0101" H 1675 975 50  0001 C CNN
-F 1 "PWR_FLAG" H 1675 1074 50  0000 C CNN
-F 2 "" H 1675 900 50  0001 C CNN
-F 3 "~" H 1675 900 50  0001 C CNN
-	1    1675 900 
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR0115
 U 1 1 5C29C771
 P 1850 5350
@@ -252,17 +178,6 @@ F 1 "+5V" H 1800 5250 50  0000 C CNN
 F 2 "" H 1850 5350 50  0001 C CNN
 F 3 "" H 1850 5350 50  0001 C CNN
 	1    1850 5350
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0103
-U 1 1 5C293067
-P 2050 1200
-F 0 "#PWR0103" H 2050 950 50  0001 C CNN
-F 1 "GND" H 2055 1027 50  0000 C CNN
-F 2 "" H 2050 1200 50  0001 C CNN
-F 3 "" H 2050 1200 50  0001 C CNN
-	1    2050 1200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -275,30 +190,6 @@ F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3088 900 50  0
 F 3 "~" H 3050 1050 50  0001 C CNN
 	1    3050 1050
 	-1   0    0    1   
-$EndComp
-$Comp
-L power:VCC #PWR0114
-U 1 1 5C2A7BAB
-P 1550 5250
-F 0 "#PWR0114" H 1550 5100 50  0001 C CNN
-F 1 "VCC" H 1567 5423 50  0000 C CNN
-F 2 "" H 1550 5250 50  0001 C CNN
-F 3 "" H 1550 5250 50  0001 C CNN
-	1    1550 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1500 900  1675 900 
-$Comp
-L Device:R R102
-U 1 1 5C2B290D
-P 2325 900
-F 0 "R102" V 2118 900 50  0000 C CNN
-F 1 "10M" V 2209 900 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2255 900 50  0001 C CNN
-F 3 "~" H 2325 900 50  0001 C CNN
-	1    2325 900 
-	0    1    1    0   
 $EndComp
 $Comp
 L power:+5V #PWR0101
@@ -763,7 +654,6 @@ F 3 "~" H 2750 1200 50  0001 C CNN
 	1    2750 1200
 	-1   0    0    1   
 $EndComp
-Connection ~ 2750 1200
 Wire Wire Line
 	2750 1200 3050 1200
 Wire Wire Line
@@ -816,8 +706,6 @@ F 3 "" H 3900 1300 50  0001 C CNN
 	1    3900 1300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3900 1300 4100 1300
 Connection ~ 4100 1300
 Wire Wire Line
 	3750 1600 3825 1600
@@ -936,8 +824,6 @@ Wire Wire Line
 Connection ~ 5150 1500
 Wire Wire Line
 	4500 1600 4700 1600
-Text Notes 650  650  0    79   ~ 16
-POWER
 Wire Notes Line
 	600  1400 600  500 
 Wire Notes Line
@@ -1230,10 +1116,6 @@ Text GLabel 2400 2150 2    50   Input ~ 0
 LED3
 Text GLabel 2400 2425 2    50   Input ~ 0
 LED4
-Text GLabel 2450 5675 0    50   Input ~ 0
--12V
-Text GLabel 2450 5475 0    50   Input ~ 0
-+12V
 $Comp
 L Device:C C112
 U 1 1 5D143DE5
@@ -1273,50 +1155,6 @@ Wire Wire Line
 Wire Wire Line
 	3050 1200 3275 1200
 Connection ~ 3050 1200
-Connection ~ 1675 900 
-Wire Wire Line
-	1675 900  2050 900 
-Connection ~ 1675 1200
-Wire Wire Line
-	1675 1200 2050 1200
-Wire Wire Line
-	2050 900  2175 900 
-Wire Wire Line
-	2050 1200 2575 1200
-Wire Wire Line
-	2475 900  2575 900 
-$Comp
-L Device:C C103
-U 1 1 5D1D00BC
-P 2575 1050
-F 0 "C103" H 2690 1096 50  0000 L CNN
-F 1 "100n" H 2690 1005 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2613 900 50  0001 C CNN
-F 3 "~" H 2575 1050 50  0001 C CNN
-	1    2575 1050
-	-1   0    0    1   
-$EndComp
-Connection ~ 2575 1200
-Wire Wire Line
-	2575 1200 2750 1200
-Connection ~ 2575 900 
-Wire Wire Line
-	2575 900  3050 900 
-Wire Wire Line
-	1500 1150 1175 1150
-$Comp
-L Device:Polyfuse F102
-U 1 1 5D47D22D
-P 1350 950
-F 0 "F102" V 1125 950 50  0000 C CNN
-F 1 "Polyfuse" V 1216 950 50  0000 C CNN
-F 2 "Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1400 750 50  0001 L CNN
-F 3 "~" H 1350 950 50  0001 C CNN
-	1    1350 950 
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	1175 950  1200 950 
 $Comp
 L Device:D D101
 U 1 1 5D4AB56B
@@ -2029,7 +1867,7 @@ L Switch:SW_SPDT SW102
 U 1 1 5CD5B016
 P 4275 2875
 F 0 "SW102" H 4275 2550 50  0000 C CNN
-F 1 "Crush A3" H 4275 2641 50  0000 C CNN
+F 1 "Crush A6" H 4275 2641 50  0000 C CNN
 F 2 "AJ-Dropbox-Kicad:SP1MS1" H 4275 2875 50  0001 C CNN
 F 3 "~" H 4275 2875 50  0001 C CNN
 	1    4275 2875
@@ -2084,10 +1922,6 @@ Wire Wire Line
 Wire Wire Line
 	2125 5600 2125 5575
 Wire Wire Line
-	2125 5575 2450 5575
-Wire Wire Line
-	1550 5250 1550 5275
-Wire Wire Line
 	750  2725 750  2950
 Wire Wire Line
 	750  2950 925  2950
@@ -2119,7 +1953,7 @@ L Switch:SW_DPDT_x2 SW101
 U 2 1 5D077BCB
 P 6350 3075
 F 0 "SW101" H 6450 3050 50  0000 C CNN
-F 1 "Dist 10" H 6425 2900 50  0000 C CNN
+F 1 "Dist 6" H 6425 2900 50  0000 C CNN
 F 2 "AJ-Dropbox-Kicad:SPDTx2" H 6350 3075 50  0001 C CNN
 F 3 "~" H 6350 3075 50  0001 C CNN
 	2    6350 3075
@@ -2193,11 +2027,11 @@ Text GLabel 1050 7025 0    50   Input ~ 0
 LED-Out10
 Text GLabel 1050 7125 0    50   Input ~ 0
 LED-Out11
-Text GLabel 4075 2775 0    50   Input ~ 0
-A3
-Text GLabel 4500 4175 0    50   Input ~ 0
-A6
 Text GLabel 4100 5600 0    50   Input ~ 0
+A3
+Text GLabel 4075 2775 0    50   Input ~ 0
+A6
+Text GLabel 4500 4175 0    50   Input ~ 0
 A7
 $Comp
 L Device:R R133
@@ -2443,34 +2277,16 @@ F 3 "~" H 2125 5475 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2125 5375 2450 5375
-Connection ~ 2125 5575
-Wire Wire Line
 	2125 5375 1850 5375
-Connection ~ 2125 5375
 Connection ~ 1850 5375
 Wire Wire Line
 	1850 5375 1850 5425
-Wire Wire Line
-	2450 5275 1550 5275
-Connection ~ 1550 5275
-Wire Wire Line
-	1550 5275 1550 5425
-Wire Wire Line
-	2450 5175 1750 5175
-Wire Wire Line
-	1750 5175 1750 5425
 $Sheet
 S 8675 4700 2400 1725
 U 5D60ED9A
 F0 "KicadJE-EU1-PT2399" 50
 F1 "KicadJE-EU1-PT2399_sub.sch" 50
 $EndSheet
-Wire Wire Line
-	1175 1050 1500 1050
-Wire Wire Line
-	1500 1050 1500 1150
-Connection ~ 1500 1150
 Text GLabel 8150 5625 2    50   Input ~ 0
 SCL-A5
 Text GLabel 8150 5075 2    50   Input ~ 0
@@ -2584,4 +2400,12 @@ Wire Wire Line
 Connection ~ 7825 5375
 Wire Wire Line
 	7825 5375 7825 5775
+Wire Wire Line
+	3275 1300 3275 1200
+Wire Wire Line
+	3275 1300 3900 1300
+Connection ~ 3900 1300
+Wire Wire Line
+	3900 1300 4100 1300
+Connection ~ 3275 1200
 $EndSCHEMATC
