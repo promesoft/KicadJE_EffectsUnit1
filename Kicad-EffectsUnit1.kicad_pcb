@@ -2965,6 +2965,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
+    (model C:/Users/anders/Documents/KiCad/Lib/aj_packages3d/3D/Connectors/PJ398SM.step
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (module AJ-Dropbox-Kicad:PJ301SM (layer F.Cu) (tedit 5C2E83E1) (tstamp 5C66EF8E)
@@ -2991,6 +2996,11 @@
       (net 50 Out11Dist))
     (model ${KIPRJMOD}/Local.pretty/PJ398SM.step
       (offset (xyz 0 0 9))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
+    (model C:/Users/anders/Documents/KiCad/Lib/aj_packages3d/3D/Connectors/PJ398SM.step
+      (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
@@ -6529,6 +6539,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
+    (model C:/Users/anders/Documents/KiCad/Lib/aj_packages3d/3D/Connectors/PJ398SM.step
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (module Connector_BarrelJack:BarrelJack_Horizontal (layer B.Cu) (tedit 5A1DBF6A) (tstamp 5C5F80DF)
@@ -6612,6 +6627,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
+    (model C:/Users/anders/Documents/KiCad/Lib/aj_packages3d/3D/Connectors/PJ398SM.step
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (module AJ-Dropbox-Kicad:PJ301SM (layer F.Cu) (tedit 5C2E83E1) (tstamp 5C5F810F)
@@ -6638,6 +6658,11 @@
     (pad TN thru_hole oval (at 0 3.38) (size 2.8 1.6) (drill oval 2 0.6) (layers *.Cu *.Mask))
     (model ${KIPRJMOD}/Local.pretty/PJ398SM.step
       (offset (xyz 0 0 9))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
+    (model C:/Users/anders/Documents/KiCad/Lib/aj_packages3d/3D/Connectors/PJ398SM.step
+      (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
@@ -6670,6 +6695,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
+    (model C:/Users/anders/Documents/KiCad/Lib/aj_packages3d/3D/Connectors/PJ398SM.step
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (module AJ-Dropbox-Kicad:PJ301SM (layer F.Cu) (tedit 5C2E83E1) (tstamp 5C5F812B)
@@ -6696,6 +6726,11 @@
     (pad TN thru_hole oval (at 0 3.38) (size 2.8 1.6) (drill oval 2 0.6) (layers *.Cu *.Mask))
     (model ${KIPRJMOD}/Local.pretty/PJ398SM.step
       (offset (xyz 0 0 9))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
+    (model C:/Users/anders/Documents/KiCad/Lib/aj_packages3d/3D/Connectors/PJ398SM.step
+      (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
@@ -6728,6 +6763,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
+    (model C:/Users/anders/Documents/KiCad/Lib/aj_packages3d/3D/Connectors/PJ398SM.step
+      (offset (xyz 0 0 8))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (module AJ-Dropbox-Kicad:PJ301SM (layer F.Cu) (tedit 5C2E83E1) (tstamp 5C5F8156)
@@ -6754,6 +6794,11 @@
       (net 82 Out))
     (model ${KIPRJMOD}/Local.pretty/PJ398SM.step
       (offset (xyz 0 0 9))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
+    (model C:/Users/anders/Documents/KiCad/Lib/aj_packages3d/3D/Connectors/PJ398SM.step
+      (offset (xyz 0 0 8))
       (scale (xyz 1 1 1))
       (rotate (xyz -90 0 0))
     )
