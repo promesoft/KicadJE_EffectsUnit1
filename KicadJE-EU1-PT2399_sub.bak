@@ -202,25 +202,6 @@ $EndComp
 Connection ~ 1675 1750
 Wire Wire Line
 	1675 1750 1900 1750
-$Comp
-L Amplifier_Operational:TL072 U?
-U 3 1 5D62F402
-P 1325 1450
-AR Path="/5D62F402" Ref="U?"  Part="3" 
-AR Path="/5D60ED9A/5D62F402" Ref="U201"  Part="3" 
-F 0 "U201" H 1325 1817 50  0000 C CNN
-F 1 "TL072" H 1325 1726 50  0000 C CNN
-F 2 "AJ-Dropbox-Kicad:AJ_SO-8_5.3x6.2mm_P1.27mm" H 1325 1450 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tl071.pdf" H 1325 1450 50  0001 C CNN
-	3    1325 1450
-	1    0    0    -1  
-$EndComp
-Connection ~ 1225 1750
-Wire Wire Line
-	1225 1750 1300 1750
-Connection ~ 1225 1150
-Wire Wire Line
-	1225 1150 1500 1150
 Connection ~ 2100 1750
 Connection ~ 2100 1450
 Connection ~ 2100 1150
@@ -371,10 +352,6 @@ Wire Wire Line
 	2550 1150 2650 1150
 Wire Wire Line
 	3725 1800 3725 1775
-Wire Wire Line
-	1100 1750 1225 1750
-Wire Wire Line
-	1075 1150 1225 1150
 Wire Wire Line
 	3900 800  3725 800 
 Wire Wire Line
@@ -1378,4 +1355,8 @@ Text GLabel 6525 1300 0    50   Input ~ 0
 In
 Text GLabel 6525 1700 0    50   Input ~ 0
 Out
+Wire Wire Line
+	1100 1750 1300 1750
+Wire Wire Line
+	1075 1150 1500 1150
 $EndSCHEMATC
