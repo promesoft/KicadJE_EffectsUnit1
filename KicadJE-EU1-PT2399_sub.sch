@@ -1205,19 +1205,6 @@ Wire Wire Line
 Connection ~ 6675 1600
 Wire Wire Line
 	6675 1200 6675 1600
-$Comp
-L power:GND #PWR?
-U 1 1 5C68B7E3
-P 6675 1800
-AR Path="/5C68B7E3" Ref="#PWR?"  Part="1" 
-AR Path="/5D60ED9A/5C68B7E3" Ref="#PWR0205"  Part="1" 
-F 0 "#PWR0205" H 6675 1550 50  0001 C CNN
-F 1 "GND" H 6680 1627 50  0000 C CNN
-F 2 "" H 6675 1800 50  0001 C CNN
-F 3 "" H 6675 1800 50  0001 C CNN
-	1    6675 1800
-	1    0    0    -1  
-$EndComp
 Text GLabel 6525 1300 0    50   Input ~ 0
 In
 Text GLabel 6525 1700 0    50   Input ~ 0
@@ -1240,4 +1227,15 @@ Connection ~ 4725 1150
 Connection ~ 1875 1450
 Wire Wire Line
 	1875 1450 2550 1450
+$Comp
+L power:GNDA #PWR?
+U 1 1 5C768062
+P 6675 1800
+F 0 "#PWR?" H 6675 1550 50  0001 C CNN
+F 1 "GNDA" H 6680 1627 50  0000 C CNN
+F 2 "" H 6675 1800 50  0001 C CNN
+F 3 "" H 6675 1800 50  0001 C CNN
+	1    6675 1800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
