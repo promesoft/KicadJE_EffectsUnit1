@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\anders\Documents\KiCad\Projects\KicadJE_EffectsUnit1\Kicad-EffectsUnit1.sch)
-    (date "25/02/2019 18:30:47")
+    (date "25/02/2019 18:33:23")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -833,7 +833,7 @@
       (tstamp 5D645B0A))
     (comp (ref D204)
       (value 5v6)
-      (footprint Diode_SMD:D_MiniMELF_Handsoldering)
+      (footprint Diode_SMD:D_MiniMELF)
       (datasheet ~)
       (libsource (lib Device) (part D_Zener) (description "Zener diode"))
       (sheetpath (names /KicadJE-EU1-PT2399/) (tstamps /5D60ED9A/))
@@ -1224,7 +1224,7 @@
       (tstamp 5C787350))
     (comp (ref D304)
       (value 5v6)
-      (footprint Diode_SMD:D_MiniMELF_Handsoldering)
+      (footprint Diode_SMD:D_MELF-RM10_Universal_Handsoldering)
       (datasheet ~)
       (libsource (lib Device) (part D_Zener) (description "Zener diode"))
       (sheetpath (names /EU3/) (tstamps /5C781441/))

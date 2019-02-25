@@ -257,7 +257,7 @@ U 1 1 5D648219
 P 4050 1625
 F 0 "D204" V 4004 1704 50  0000 L CNN
 F 1 "5v6" V 4095 1704 50  0000 L CNN
-F 2 "Diode_SMD:D_MELF-RM10_Universal_Handsoldering" H 4050 1625 50  0001 C CNN
+F 2 "Diode_SMD:D_MiniMELF" H 4050 1625 50  0001 C CNN
 F 3 "~" H 4050 1625 50  0001 C CNN
 	1    4050 1625
 	0    1    1    0   
@@ -455,7 +455,7 @@ AR Path="/5D64EB0F" Ref="RV?"  Part="1"
 AR Path="/5D60ED9A/5D64EB0F" Ref="RV202"  Part="1" 
 F 0 "RV202" H 2380 5071 50  0000 R CNN
 F 1 "20k" H 2380 4980 50  0000 R CNN
-F 2 "Potentiometer_THT:Potentiometer_Alps_RK09K_Single_Vertical" H 2450 5025 50  0001 C CNN
+F 2 "Potentiometer_THT:Potentiometer_China_RK09_Single_Vertical_AJ" H 2450 5025 50  0001 C CNN
 F 3 "~" H 2450 5025 50  0001 C CNN
 	1    2450 5025
 	1    0    0    -1  
