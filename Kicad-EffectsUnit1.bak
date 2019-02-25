@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title "Effects Unit 1"
 Date "2019-02-05"
 Rev "Rev 1"
@@ -2377,4 +2377,10 @@ Wire Wire Line
 	4700 1600 5150 1600
 Wire Wire Line
 	4700 1300 5000 1300
+$Sheet
+S 6875 750  2525 1800
+U 5C781441
+F0 "EU3" 50
+F1 "EU3.sch" 50
+$EndSheet
 $EndSCHEMATC
