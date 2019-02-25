@@ -26,7 +26,7 @@ Practically it may be required to fit the bitcrusher and the distortion in one u
  
 ![](KicadJE-EU1-MK1-RevA-Top3D.png)
 
-![](KicadJE-EffectsUnit1.lib.png)
+![](KicadJE-EffectsUnit1_3D1.png)
 
 ## Vital Components
  - Arduino Nano
