@@ -316,8 +316,6 @@ Wire Wire Line
 Wire Wire Line
 	5025 1150 5075 1150
 Connection ~ 5175 1150
-Wire Wire Line
-	5175 1150 5325 1150
 $Comp
 L Audio:PT2399 U202
 U 1 1 5D64CF96
@@ -1200,9 +1198,6 @@ Wire Wire Line
 	1075 1150 1500 1150
 Wire Wire Line
 	1675 1150 2550 1150
-Wire Wire Line
-	5400 1150 5325 1150
-Connection ~ 5325 1150
 $Comp
 L power:GNDA #PWR0102
 U 1 1 5C768062
@@ -1302,4 +1297,6 @@ Wire Wire Line
 	5075 800  4875 800 
 Wire Wire Line
 	1675 1450 2550 1450
+Wire Wire Line
+	5175 1150 5400 1150
 $EndSCHEMATC
