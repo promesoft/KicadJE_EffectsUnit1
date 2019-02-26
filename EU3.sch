@@ -610,7 +610,7 @@ F 3 "~" H 10550 2575 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	10200 1325 10200 1700
+	10200 1325 10200 1600
 Wire Wire Line
 	10200 1700 10350 1700
 Connection ~ 10200 1325
@@ -753,8 +753,6 @@ Wire Wire Line
 Connection ~ 10150 2575
 Wire Wire Line
 	10150 2575 10050 2575
-Wire Wire Line
-	9300 1300 9300 1675
 Connection ~ 9300 1675
 Wire Wire Line
 	9300 1675 9300 2050
@@ -1344,4 +1342,14 @@ Wire Wire Line
 	4325 4525 4325 4425
 Wire Wire Line
 	1875 1100 2300 1100
+Wire Wire Line
+	10200 1600 9300 1600
+Wire Wire Line
+	9300 1300 9300 1600
+Connection ~ 10200 1600
+Wire Wire Line
+	10200 1600 10200 1700
+Connection ~ 9300 1600
+Wire Wire Line
+	9300 1600 9300 1675
 $EndSCHEMATC
