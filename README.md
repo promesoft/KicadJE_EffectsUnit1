@@ -12,15 +12,12 @@ Eurorack form factor
 ## Base Construction 
 The idea is to have 3 different units.
 Practically it may be required to fit the bitcrusher and the distortion in one unit.
-### Distortion base board 
- - 10pin Europower connector
- - Barreljack for 7-12V digital Pwr
+### Distortion base board with Arduino Bitcrusher
+ - 16pin Europower connector
 ### PT2399 base board 
  - 10pin Europower connector
- - Barreljack for 7-12V digital Pwr
-### Arduino Bitcrusher
- - 10pin Europower connector
- - Barreljack for 7-12V digital Pwr
+### Binary counter and clock
+ - 16pin Europower connector
  
 ![](KicadJE-EU1-MK1-RevA-Schematic.png) 
  
