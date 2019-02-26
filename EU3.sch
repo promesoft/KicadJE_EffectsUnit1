@@ -1208,10 +1208,10 @@ U 1 1 5C7FAEA2
 P 3600 1300
 AR Path="/5C7FAEA2" Ref="P?"  Part="1" 
 AR Path="/5D60ED9A/5C7FAEA2" Ref="P?"  Part="1" 
-AR Path="/5C781441/5C7FAEA2" Ref="P?"  Part="1" 
-F 0 "P?" H 3600 802 40  0000 C CNN
+AR Path="/5C781441/5C7FAEA2" Ref="P301"  Part="1" 
+F 0 "P301" H 3600 802 40  0000 C CNN
 F 1 "HEADER_2x5_Doepfer" H 3600 878 40  0000 C CNN
-F 2 "Doepfer conn" H 3600 969 60  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 3600 969 60  0000 C CNN
 F 3 "" H 3600 1300 60  0000 C CNN
 	1    3600 1300
 	-1   0    0    1   
@@ -1278,4 +1278,8 @@ Wire Wire Line
 	3850 1200 3750 1200
 Wire Wire Line
 	3750 1100 3950 1100
+Text Label 3400 1600 0    50   ~ 0
+-12
+Text Label 3400 1750 0    50   ~ 0
++12
 $EndSCHEMATC

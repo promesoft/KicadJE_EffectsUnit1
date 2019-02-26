@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\anders\Documents\KiCad\Projects\KicadJE_EffectsUnit1\Kicad-EffectsUnit1.sch)
-    (date "26/02/2019 22:24:28")
+    (date "26/02/2019 22:27:23")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -1497,7 +1497,7 @@
       (tstamp 5C8AA357))
     (comp (ref P301)
       (value HEADER_2x5_Doepfer)
-      (footprint "Doepfer conn")
+      (footprint Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical)
       (libsource (lib Eurorack) (part HEADER_2x5_Doepfer) (description ""))
       (sheetpath (names /EU3/) (tstamps /5C781441/))
       (tstamp 5C7FAEA2)))

@@ -17,160 +17,64 @@ $EndDescr
 $Comp
 L power:GNDS #PWR?
 U 1 1 5C78729D
-P 1250 1400
+P 2150 1400
 AR Path="/5C78729D" Ref="#PWR?"  Part="1" 
 AR Path="/5D60ED9A/5C78729D" Ref="#PWR?"  Part="1" 
 AR Path="/5C781441/5C78729D" Ref="#PWR0302"  Part="1" 
-F 0 "#PWR0302" H 1250 1150 50  0001 C CNN
-F 1 "GNDS" H 1255 1227 50  0000 C CNN
-F 2 "" H 1250 1400 50  0001 C CNN
-F 3 "" H 1250 1400 50  0001 C CNN
-	1    1250 1400
+F 0 "#PWR0302" H 2150 1150 50  0001 C CNN
+F 1 "GNDS" H 2155 1227 50  0000 C CNN
+F 2 "" H 2150 1400 50  0001 C CNN
+F 3 "" H 2150 1400 50  0001 C CNN
+	1    2150 1400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG?
 U 1 1 5C7872C9
-P 1350 1400
+P 2025 1400
 AR Path="/5C7872C9" Ref="#FLG?"  Part="1" 
 AR Path="/5D60ED9A/5C7872C9" Ref="#FLG?"  Part="1" 
 AR Path="/5C781441/5C7872C9" Ref="#FLG0303"  Part="1" 
-F 0 "#FLG0303" H 1350 1475 50  0001 C CNN
-F 1 "PWR_FLAG" H 1350 1574 50  0000 C CNN
-F 2 "" H 1350 1400 50  0001 C CNN
-F 3 "~" H 1350 1400 50  0001 C CNN
-	1    1350 1400
+F 0 "#FLG0303" H 2025 1475 50  0001 C CNN
+F 1 "PWR_FLAG" H 2025 1574 50  0000 C CNN
+F 2 "" H 2025 1400 50  0001 C CNN
+F 3 "~" H 2025 1400 50  0001 C CNN
+	1    2025 1400
 	1    0    0    -1  
 $EndComp
-Text GLabel 1875 1100 0    50   Input ~ 0
-+12Vc
-$Comp
-L Device:C C?
-U 1 1 5C783F87
-P 1250 1150
-AR Path="/5C783F87" Ref="C?"  Part="1" 
-AR Path="/5C781441/5C783F87" Ref="C301"  Part="1" 
-F 0 "C301" H 1365 1196 50  0000 L CNN
-F 1 "100n" H 1365 1105 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 1288 1000 50  0001 C CNN
-F 3 "~" H 1250 1150 50  0001 C CNN
-	1    1250 1150
-	-1   0    0    1   
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 5C783F8E
-P 1250 950
-AR Path="/5C783F8E" Ref="#PWR?"  Part="1" 
-AR Path="/5C781441/5C783F8E" Ref="#PWR0103"  Part="1" 
-F 0 "#PWR0103" H 1250 800 50  0001 C CNN
-F 1 "+5V" H 1200 850 50  0000 C CNN
-F 2 "" H 1250 950 50  0001 C CNN
-F 3 "" H 1250 950 50  0001 C CNN
-	1    1250 950 
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1250 1000 1250 950 
-Connection ~ 1250 1000
 $Comp
 L Device:CP C?
 U 1 1 5C783FA4
-P 2300 1250
+P 2150 1250
 AR Path="/5C783FA4" Ref="C?"  Part="1" 
 AR Path="/5C781441/5C783FA4" Ref="C303"  Part="1" 
-F 0 "C303" H 2250 1450 50  0000 L CNN
-F 1 "100uF 16v" H 2150 1550 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2338 1100 50  0001 C CNN
-F 3 "~" H 2300 1250 50  0001 C CNN
-	1    2300 1250
+F 0 "C303" H 2100 1450 50  0000 L CNN
+F 1 "100uF 16v" H 2000 1550 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2188 1100 50  0001 C CNN
+F 3 "~" H 2150 1250 50  0001 C CNN
+	1    2150 1250
 	1    0    0    -1  
 $EndComp
-Connection ~ 2300 1400
 $Comp
 L Device:C C?
 U 1 1 5C783FBB
-P 2700 1250
+P 2550 1250
 AR Path="/5C783FBB" Ref="C?"  Part="1" 
 AR Path="/5C781441/5C783FBB" Ref="C304"  Part="1" 
-F 0 "C304" H 2750 1150 50  0000 L CNN
-F 1 "100n" H 2650 1050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2738 1100 50  0001 C CNN
-F 3 "~" H 2700 1250 50  0001 C CNN
-	1    2700 1250
+F 0 "C304" H 2600 1150 50  0000 L CNN
+F 1 "100n" H 2500 1050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2588 1100 50  0001 C CNN
+F 3 "~" H 2550 1250 50  0001 C CNN
+	1    2550 1250
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	2300 1400 2475 1400
-Connection ~ 2700 1400
-Wire Wire Line
-	2300 1100 2475 1100
+	2300 1100 2325 1100
 Connection ~ 2300 1100
-$Comp
-L Connector_Generic:Conn_02x08_Odd_Even J?
-U 1 1 5C783FCF
-P 3550 1100
-AR Path="/5C783FCF" Ref="J?"  Part="1" 
-AR Path="/5C781441/5C783FCF" Ref="J302"  Part="1" 
-F 0 "J302" H 3600 1617 50  0000 C CNN
-F 1 "Doepfer connector" H 3600 1526 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x08_P2.54mm_Vertical" H 3550 1100 50  0001 C CNN
-F 3 "~" H 3550 1100 50  0001 C CNN
-	1    3550 1100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3350 1000 3250 1000
-Connection ~ 2700 1100
-Wire Wire Line
-	3350 1200 3350 1300
-Wire Wire Line
-	3350 800  3350 700 
-Wire Wire Line
-	3350 700  3850 700 
-Wire Wire Line
-	3850 700  3850 800 
-Wire Wire Line
-	3350 900  3300 900 
-Wire Wire Line
-	3300 900  3300 650 
-Wire Wire Line
-	3300 650  3900 650 
-Wire Wire Line
-	3900 650  3900 900 
-Wire Wire Line
-	3900 900  3850 900 
-Wire Wire Line
-	3850 1000 3950 1000
-Wire Wire Line
-	3950 1000 3950 600 
-Wire Wire Line
-	3950 600  3250 600 
-Wire Wire Line
-	3250 600  3250 1000
-Connection ~ 3250 1000
-Wire Wire Line
-	3250 1000 1875 1000
 Wire Wire Line
 	3850 1600 3850 1500
 Wire Wire Line
-	3850 1200 3850 1300
-Wire Wire Line
-	3850 1300 3850 1400
-Connection ~ 3850 1300
-Wire Wire Line
 	3850 1400 3900 1400
-Connection ~ 3850 1400
-Wire Wire Line
-	3950 1100 3850 1100
-Wire Wire Line
-	3350 1300 3350 1400
-Connection ~ 3350 1300
-Connection ~ 3350 1400
-Wire Wire Line
-	2700 1100 2900 1100
-Wire Wire Line
-	2700 1400 2900 1400
 Wire Wire Line
 	3900 1400 3900 1650
 Wire Wire Line
@@ -185,17 +89,12 @@ Wire Wire Line
 Wire Wire Line
 	3350 1600 3850 1600
 Wire Wire Line
-	3350 1700 3350 1600
-Connection ~ 3350 1600
-Wire Wire Line
 	3950 1100 3950 1750
 Wire Wire Line
 	3950 1750 3150 1750
 Wire Wire Line
 	3150 1750 3150 1100
 Connection ~ 3150 1100
-Wire Wire Line
-	3150 1100 3350 1100
 $Comp
 L power:PWR_FLAG #FLG?
 U 1 1 5C784005
@@ -209,94 +108,45 @@ F 3 "~" H 2300 1100 50  0001 C CNN
 	1    2300 1100
 	1    0    0    -1  
 $EndComp
-Text Label 3850 800  0    50   ~ 0
-Gate
-Text Label 3850 900  0    50   ~ 0
-CV
 $Comp
 L Device:C C?
 U 1 1 5C784023
-P 2900 1250
+P 2750 1250
 AR Path="/5C784023" Ref="C?"  Part="1" 
 AR Path="/5C781441/5C784023" Ref="C305"  Part="1" 
-F 0 "C305" H 2950 1150 50  0000 L CNN
-F 1 "100n" H 2850 1050 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2938 1100 50  0001 C CNN
-F 3 "~" H 2900 1250 50  0001 C CNN
-	1    2900 1250
+F 0 "C305" H 2800 1150 50  0000 L CNN
+F 1 "100n" H 2700 1050 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2788 1100 50  0001 C CNN
+F 3 "~" H 2750 1250 50  0001 C CNN
+	1    2750 1250
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:CP C?
-U 1 1 5C78402A
-P 1475 1150
-AR Path="/5C78402A" Ref="C?"  Part="1" 
-AR Path="/5C781441/5C78402A" Ref="C302"  Part="1" 
-F 0 "C302" H 1593 1196 50  0000 L CNN
-F 1 "100uF" H 1593 1105 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1513 1000 50  0001 C CNN
-F 3 "~" H 1475 1150 50  0001 C CNN
-	1    1475 1150
-	1    0    0    -1  
-$EndComp
-Connection ~ 1475 1000
-Wire Wire Line
-	1475 1000 1250 1000
-$Comp
 L Device:D D?
 U 1 1 5C784035
-P 2475 1250
+P 2325 1250
 AR Path="/5C784035" Ref="D?"  Part="1" 
 AR Path="/5C781441/5C784035" Ref="D301"  Part="1" 
-F 0 "D301" V 2429 1329 50  0000 L CNN
-F 1 "1N1007" V 2520 1329 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 2475 1250 50  0001 C CNN
-F 3 "~" H 2475 1250 50  0001 C CNN
-	1    2475 1250
+F 0 "D301" V 2279 1329 50  0000 L CNN
+F 1 "1N1007" V 2370 1329 50  0000 L CNN
+F 2 "Diode_SMD:D_SOD-123" H 2325 1250 50  0001 C CNN
+F 3 "~" H 2325 1250 50  0001 C CNN
+	1    2325 1250
 	0    1    1    0   
 $EndComp
-Connection ~ 2475 1100
-Wire Wire Line
-	2475 1100 2700 1100
-Connection ~ 2475 1400
-Wire Wire Line
-	2475 1400 2700 1400
-Connection ~ 2900 1400
-Connection ~ 2900 1100
 $Comp
 L Device:Polyfuse F?
 U 1 1 5C784057
-P 1725 1000
+P 2950 1100
 AR Path="/5C784057" Ref="F?"  Part="1" 
 AR Path="/5C781441/5C784057" Ref="F301"  Part="1" 
-F 0 "F301" V 1500 1000 50  0000 C CNN
-F 1 "Polyfuse" V 1591 1000 50  0000 C CNN
-F 2 "Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 1775 800 50  0001 L CNN
-F 3 "~" H 1725 1000 50  0001 C CNN
-	1    1725 1000
+F 0 "F301" V 2725 1100 50  0000 C CNN
+F 1 "Polyfuse" V 2816 1100 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3000 900 50  0001 L CNN
+F 3 "~" H 2950 1100 50  0001 C CNN
+	1    2950 1100
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	1575 1000 1475 1000
-Text Label 3850 1000 0    50   ~ 0
-+5Vin
-Wire Wire Line
-	1475 1400 1475 1300
-Wire Wire Line
-	2900 1100 3150 1100
-Wire Wire Line
-	2900 1400 3200 1400
-Wire Wire Line
-	1250 1300 1250 1400
-Wire Wire Line
-	1250 1400 1350 1400
-Connection ~ 1475 1400
-Connection ~ 1250 1400
-Connection ~ 1350 1400
-Wire Wire Line
-	1350 1400 1475 1400
-Wire Wire Line
-	1475 1400 2300 1400
 Wire Notes Line
 	4050 1950 575  1950
 Wire Notes Line
@@ -361,8 +211,6 @@ Wire Wire Line
 	3025 3450 3025 3200
 Wire Wire Line
 	3025 3200 3175 3200
-Text GLabel 2325 2700 0    50   Input ~ 0
-+12Vc
 Wire Wire Line
 	2350 3000 2350 2950
 Wire Wire Line
@@ -1341,7 +1189,7 @@ Wire Wire Line
 Wire Wire Line
 	4325 4525 4325 4425
 Wire Wire Line
-	1875 1100 2300 1100
+	1875 1100 2150 1100
 Wire Wire Line
 	10200 1600 9300 1600
 Wire Wire Line
@@ -1352,4 +1200,82 @@ Wire Wire Line
 Connection ~ 9300 1600
 Wire Wire Line
 	9300 1600 9300 1675
+Text GLabel 2325 2700 0    50   Input ~ 0
++12Vc
+$Comp
+L Eurorack:HEADER_2x5_Doepfer P?
+U 1 1 5C7FAEA2
+P 3600 1300
+AR Path="/5C7FAEA2" Ref="P?"  Part="1" 
+AR Path="/5D60ED9A/5C7FAEA2" Ref="P?"  Part="1" 
+AR Path="/5C781441/5C7FAEA2" Ref="P?"  Part="1" 
+F 0 "P?" H 3600 802 40  0000 C CNN
+F 1 "HEADER_2x5_Doepfer" H 3600 878 40  0000 C CNN
+F 2 "Doepfer conn" H 3600 969 60  0000 C CNN
+F 3 "" H 3600 1300 60  0000 C CNN
+	1    3600 1300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3350 1200 3350 1300
+Wire Wire Line
+	3850 1200 3850 1300
+Text GLabel 1875 1100 0    50   Input ~ 0
++12Vc
+Connection ~ 2150 1100
+Wire Wire Line
+	2150 1100 2300 1100
+Connection ~ 2150 1400
+Connection ~ 2325 1100
+Connection ~ 2325 1400
+Connection ~ 2550 1100
+Connection ~ 2550 1400
+Connection ~ 2750 1100
+Connection ~ 2750 1400
+Wire Wire Line
+	2150 1400 2325 1400
+Wire Wire Line
+	2550 1100 2750 1100
+Wire Wire Line
+	2550 1400 2750 1400
+Wire Wire Line
+	2325 1100 2550 1100
+Wire Wire Line
+	2325 1400 2550 1400
+Wire Wire Line
+	2750 1100 2800 1100
+Wire Wire Line
+	2750 1400 3200 1400
+Wire Wire Line
+	3100 1100 3150 1100
+Wire Wire Line
+	2025 1400 2150 1400
+Wire Wire Line
+	3150 1100 3450 1100
+Wire Wire Line
+	3350 1200 3450 1200
+Wire Wire Line
+	3450 1300 3350 1300
+Connection ~ 3350 1300
+Wire Wire Line
+	3350 1300 3350 1400
+Wire Wire Line
+	3450 1400 3350 1400
+Connection ~ 3350 1400
+Wire Wire Line
+	3450 1500 3350 1500
+Wire Wire Line
+	3750 1500 3850 1500
+Wire Wire Line
+	3750 1400 3850 1400
+Connection ~ 3850 1400
+Wire Wire Line
+	3750 1300 3850 1300
+Connection ~ 3850 1300
+Wire Wire Line
+	3850 1300 3850 1400
+Wire Wire Line
+	3850 1200 3750 1200
+Wire Wire Line
+	3750 1100 3950 1100
 $EndSCHEMATC
