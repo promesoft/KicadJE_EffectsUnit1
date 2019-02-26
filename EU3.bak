@@ -5,10 +5,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Clock and Counter - CNC"
+Date "2019-02-25"
+Rev "Rev A"
+Comp "Johansen Engineering"
 Comment1 ""
 Comment2 ""
 Comment3 ""
