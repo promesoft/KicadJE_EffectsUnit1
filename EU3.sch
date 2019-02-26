@@ -442,7 +442,7 @@ U 1 1 5C7AF350
 P 2350 3400
 F 0 "U302" H 2350 3978 50  0000 C CNN
 F 1 "LM555" H 2350 3887 50  0000 C CNN
-F 2 "" H 2350 3400 50  0001 C CNN
+F 2 "AJ-Dropbox-Kicad:AJ_SO-8_5.3x6.2mm_P1.27mm" H 2350 3400 50  0001 C CNN
 F 3 "http://www.ti.com/lit/ds/symlink/lm555.pdf" H 2350 3400 50  0001 C CNN
 	1    2350 3400
 	1    0    0    -1  
@@ -453,7 +453,7 @@ U 1 1 5C7AF44B
 P 5650 4725
 F 0 "U303" H 5650 5703 50  0000 C CNN
 F 1 "4017" H 5650 5612 50  0000 C CNN
-F 2 "" H 5650 4725 50  0001 C CNN
+F 2 "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm" H 5650 4725 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf" H 5650 4725 50  0001 C CNN
 	1    5650 4725
 	1    0    0    -1  

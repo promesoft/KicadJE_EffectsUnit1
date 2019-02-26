@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\anders\Documents\KiCad\Projects\KicadJE_EffectsUnit1\Kicad-EffectsUnit1.sch)
-    (date "26/02/2019 21:26:07")
+    (date "26/02/2019 21:32:48")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -1231,12 +1231,14 @@
       (tstamp 5C784057))
     (comp (ref U302)
       (value LM555)
+      (footprint AJ-Dropbox-Kicad:AJ_SO-8_5.3x6.2mm_P1.27mm)
       (datasheet http://www.ti.com/lit/ds/symlink/lm555.pdf)
       (libsource (lib Timer) (part LM555) (description "Timer, DIP-8/SOIC-8/SSOP-8"))
       (sheetpath (names /EU3/) (tstamps /5C781441/))
       (tstamp 5C7AF350))
     (comp (ref U303)
       (value 4017)
+      (footprint Package_SO:SOIC-16_4.55x10.3mm_P1.27mm)
       (datasheet http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf)
       (libsource (lib 4xxx) (part 4017) (description "Johnson Counter ( 10 outputs )"))
       (sheetpath (names /EU3/) (tstamps /5C781441/))
