@@ -28,7 +28,8 @@ Practically it may be required to fit the bitcrusher and the distortion in one u
 ## Vital Components
  - Arduino Nano
  - PT2399
- - Mini Jacks (PJ-301)
+ - CD4017
+ - NE555
  - Mini Jacks (PJ-321) 
  - ALPS RV09 potentiometer
  - TL072 or similar dual op amp
