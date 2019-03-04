@@ -3,7 +3,7 @@ JE-EU1 - PT2399 based reverb - distortion units
 Eurorack form factor
 
 # MK1 Design
-## Status - Project initialisation
+## Status - PCB and Gerber completed
 ### Issues and Notes
  * Note
 ### Errata
