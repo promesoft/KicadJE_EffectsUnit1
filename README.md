@@ -8,8 +8,8 @@ Eurorack form factor
 ## Initial 
 | Stage  | Detail | Status |
 | ------------- | ------------- | ------------- |
-| create material  | sch/pcb | produced MK2 Rev A  |
-| | gerber | Produced MK2 |
+| create material  | sch/pcb | produced Rev A  |
+| | gerber | Produced |
 | production  | ordered  |  |
 |  | produced |  |
 |  | delivered |  |
