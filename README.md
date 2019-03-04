@@ -40,7 +40,8 @@ Practically it may be required to fit the bitcrusher and the distortion in one u
 ### PT2399 base board 
  - 10pin Europower connector
 ### Binary counter and clock
- - 16pin Europower connector
+ - 10pin Europower connector
+ - Build around a CD4017 counter chip (SOP-14)
  
 ![](KicadJE-EU1-MK1-RevA-Schematic.png) 
  
