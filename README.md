@@ -3,10 +3,33 @@ JE-EU1 - PT2399 based reverb - distortion units
 Eurorack form factor
 
 # MK1 Design
-## Status - PCB and Gerber completed
-### Issues and Notes
+## Status - Gerber done
+# Status - Preliminary tests
+## Initial 
+| Stage  | Detail | Status |
+| ------------- | ------------- | ------------- |
+| create material  | sch/pcb | produced MK2 Rev A  |
+| | gerber | Produced MK2 |
+| production  | ordered  |  |
+|  | produced |  |
+|  | delivered |  |
+## Preliminary validation
+| Test  | Detail | Status |
+| ------------- | ------------- | ------------- |
+| Initial Inspection |  |  |
+| Initial Technical Test |   |  |
+| Initial Product Test |   |  |
+
+## Secondary validation
+| Test  | Detail | Status |
+| ------------- | ------------- |------------- |
+| Product Test |  | |
+| Quality |  | |
+| Long Term Product Test | |  |
+
+## Errata
+## Issues and Notes
  * Note
-### Errata
 ### Workarounds
 
 ## Base Construction 
