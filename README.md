@@ -10,15 +10,20 @@ Eurorack form factor
 | ------------- | ------------- | ------------- |
 | create material  | sch/pcb | produced Rev A  |
 | | gerber | Produced |
-| production  | ordered  |  |
-|  | produced |  |
-|  | delivered |  |
+| production  | ordered  | YES |
+|  | produced | YES |
+|  | delivered | YES |
 ## Preliminary validation
 | Test  | Detail | Status |
 | ------------- | ------------- | ------------- |
-| Initial Inspection |  |  |
+| Initial Inspection |  | OK |
+| Initial Technical Test | PT2399 | OK - See Errata |
+| Initial Technical Test |   |  |
 | Initial Technical Test |   |  |
 | Initial Product Test |   |  |
+| Initial Power Consumption | PT2399 | 40-60mA ! depending on VCO circuit |
+| Initial Power Consumption | Counter |  |
+| Initial Power Consumption | Bitcrunch |  |
 
 ## Secondary validation
 | Test  | Detail | Status |
@@ -28,8 +33,17 @@ Eurorack form factor
 | Long Term Product Test | |  |
 
 ## Errata
+### ERRATA - PT2399
+ * 78L05 inv pinout
+ * MMBT2222 wrong pinout - workaround flip and turn
 ## Issues and Notes
- * Note
+### Issues and Notes - PT2399
+ * Replace 20k across Q203 w Yellow LED
+ * Replace 120k R214 with 47k
+ * Move C222 across RV202 - move D2015 across R214 and remove Q202+R213
+ * Consider Vactrol of RV202 and RV201
+ * Consider +5V supply...
+ 
 ### Workarounds
 
 ## Base Construction 
