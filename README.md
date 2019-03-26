@@ -53,6 +53,9 @@ Practically it may be required to fit the bitcrusher and the distortion in one u
  - 16pin Europower connector
 ### PT2399 base board 
  - 10pin Europower connector
+ - BC547 or BC337 NPN and Zener 7v5 regulator followed by 78L05 regulator
+ - PT2399 echo circuit with anti lockup circuit for pin 6
+ - 
 ### Binary counter and clock
  - 10pin Europower connector
  - Build around a CD4017 counter chip (SOP-14)
