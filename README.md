@@ -36,6 +36,7 @@ Eurorack form factor
 ### ERRATA - PT2399
  * 78L05 inv pinout
  * MMBT2222 wrong pinout - workaround flip and turn
+ * Delay time pot reversed
 ## Issues and Notes
 ### Issues and Notes - PT2399
  * Replace 20k across Q203 w Yellow LED
