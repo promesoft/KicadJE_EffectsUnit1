@@ -28,9 +28,9 @@ Eurorack form factor
 ## Secondary validation
 | Test  | Detail | Status |
 | ------------- | ------------- |------------- |
-| Product Test |  | |
-| Quality |  | |
-| Long Term Product Test | |  |
+| Product Test |  | ok after mod |
+| Quality |  | ongoing |
+| Long Term Product Test | | Modded version installed in rack |
 
 ## Errata
 ### ERRATA - PT2399
