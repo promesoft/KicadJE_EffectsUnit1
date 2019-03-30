@@ -41,6 +41,7 @@ Eurorack form factor
 ### Issues and Notes - PT2399
  * Replace 20k across Q203 w Yellow LED
  * Replace 120k R214 with 47k
+ * Replace 100uF C310 with 10-22uF (consider a switch for next rev)
  * Move C222 across RV202 - move D2015 across R214 and remove Q202+R213
  * Consider Vactrol of RV202 and RV201
  * Consider +5V supply...
