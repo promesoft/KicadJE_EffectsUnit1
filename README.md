@@ -37,14 +37,21 @@ Eurorack form factor
  * 78L05 inv pinout
  * MMBT2222 wrong pinout - workaround flip and turn
  * Delay time pot reversed
+ * PT2399 occational latchup with modification
+### ERRATA - Counter
+### ERRATA - Bitcrunch
 ## Issues and Notes
 ### Issues and Notes - PT2399
  * Replace 20k across Q203 w Yellow LED
  * Replace 120k R214 with 47k
- * Replace 100uF C310 with 10-22uF (consider a switch for next rev)
  * Move C222 across RV202 - move D2015 across R214 and remove Q202+R213
  * Consider Vactrol of RV202 and RV201
  * Consider +5V supply...
+### Issues and Notes - Counter
+ * Replace 100uF C310 with 10-22uF (consider a switch for next rev)
+ * Reset/Clk in Trigger not 5V tolerant
+
+### Issues and Notes - Bit Crunch
  
 ### Workarounds
 
