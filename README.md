@@ -92,5 +92,5 @@ Practically it may be required to fit the bitcrusher and the distortion in one u
 
 The construction is inspired from
 -----------------------------------------------------
-https://www.electronics-tutorials.ws/waveforms/555_oscillator.html (Counter clock)
-https://www.electrosmash.com/pt2399-analysis (PT2399 Reverb)
+ - https://www.electronics-tutorials.ws/waveforms/555_oscillator.html (Counter clock)
+ - https://www.electrosmash.com/pt2399-analysis (PT2399 Reverb)
