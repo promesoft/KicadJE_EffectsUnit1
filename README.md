@@ -52,6 +52,7 @@ Eurorack form factor
 ### Issues and Notes - Counter
  * Replace 100uF C310 with 10-22uF (consider a switch for next rev)
  * Reset/Clk in Trigger not 5V tolerant
+ * Add I/O protection
 
 ### Issues and Notes - Bit Crunch
  
