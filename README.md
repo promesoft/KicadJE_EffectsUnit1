@@ -23,9 +23,9 @@ Eurorack form factor
 | Initial Product Test | PT2399 | OK |
 | Initial Product Test | Counter | OK |
 | Initial Product Test | Bitcrunch  |  |
-| Initial Power Consumption | PT2399 | 40-60mA ! depending on VCO circuit |
-| Initial Power Consumption | Counter | 10mA  |
-| Initial Power Consumption | Bitcrunch |  |
+| Initial Power Consumption | PT2399 | 40-60mA ! +12v depending on VCO circuit |
+| Initial Power Consumption | Counter | 20mA +12v  |
+| Initial Power Consumption | Bitcrunch | +12v +5v -12v |
 
 ## Secondary validation
 | Test  | Detail | Status |
