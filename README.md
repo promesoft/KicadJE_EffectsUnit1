@@ -55,6 +55,14 @@ Eurorack form factor
  * Add I/O protection
 
 ### Issues and Notes - Bit Crunch
+ * 11k = 10k
+ * 22k = 10k
+ * 33k = 10k
+ * 44k = 10k
+ * 11n = 100n
+ * 22n = 100n
+ * 33n = 100n
+ * 44n = 100n
  
 ### Workarounds
 
@@ -95,3 +103,4 @@ The construction is inspired from
 -----------------------------------------------------
  - https://www.electronics-tutorials.ws/waveforms/555_oscillator.html (Counter clock)
  - https://www.electrosmash.com/pt2399-analysis (PT2399 Reverb)
+ - http://sim.okawa-denshi.jp/en/OPttool.php (Filter calc for MFB filter)
