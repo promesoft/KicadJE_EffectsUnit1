@@ -90,5 +90,6 @@ Practically it may be required to fit the bitcrusher and the distortion in one u
 ### Mechanical
 ![](EU1-MK1-mechanical.png)
 
-The construction is 
+The construction is inspired from
 -----------------------------------------------------
+https://www.electronics-tutorials.ws/waveforms/555_oscillator.html (Counter clock)
