@@ -299,10 +299,10 @@ void updateLED(){
   digitalWrite(LED3, LEDData[state][2]);
   digitalWrite(LED4, LEDData[state][3]);
   delay(1);
-  digitalWrite(LED_Out6, state & B00000001);
-  digitalWrite(LED_Out9, state & B00000010);
-  digitalWrite(LED_Out10, state & B00000001);
-  digitalWrite(LED_Out11, state & B00000010);
+  digitalWrite(LED_Out6, state == 0);
+  digitalWrite(LED_Out9, state == 1);
+  digitalWrite(LED_Out10, state == 2);
+  digitalWrite(LED_Out11, state == 3);
 }
 
 void clearLED(){
