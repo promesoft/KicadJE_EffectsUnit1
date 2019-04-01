@@ -42,6 +42,8 @@ Eurorack form factor
  * PT2399 occational latchup with modification
 ### ERRATA - Counter
 ### ERRATA - Bitcrunch
+ * SW 101 and SW105 should change footprint (too small for MT202)
+ * D110 and D111 is 0805 and cannot be fitted with SOD123
 ## Issues and Notes
 ### Issues and Notes - PT2399
  * Replace 20k across Q203 w Yellow LED
@@ -55,6 +57,7 @@ Eurorack form factor
  * Add I/O protection
 
 ### Issues and Notes - Bit Crunch
+LFO only values:
  * 11k = 10k
  * 22k = 10k
  * 33k = 10k
@@ -63,7 +66,9 @@ Eurorack form factor
  * 22n = 100n
  * 33n = 100n
  * 44n = 100n
- 
+Dist/Bitcrush values has been added to the sch
+ * Move LED D114 closer to Out9
+
 ### Workarounds
 
 ## Base Construction 
@@ -104,3 +109,4 @@ The construction is inspired from
  - https://www.electronics-tutorials.ws/waveforms/555_oscillator.html (Counter clock)
  - https://www.electrosmash.com/pt2399-analysis (PT2399 Reverb)
  - http://sim.okawa-denshi.jp/en/OPttool.php (Filter calc for MFB filter)
+ - http://sim.okawa-denshi.jp/en/OPseikiLowkeisan.htm (Filter calc for Sallen Key filter (Out9 and Out10))
