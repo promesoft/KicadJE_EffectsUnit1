@@ -56,6 +56,7 @@ Eurorack form factor
  * Add I/O protection
 
 ### Issues and Notes - Bit Crunch
+LFO only values:
  * 11k = 10k
  * 22k = 10k
  * 33k = 10k
@@ -64,7 +65,9 @@ Eurorack form factor
  * 22n = 100n
  * 33n = 100n
  * 44n = 100n
- 
+Dist/Bitcrush values has been added to the sch
+ * Move LED D114 closer to Out9
+
 ### Workarounds
 
 ## Base Construction 
