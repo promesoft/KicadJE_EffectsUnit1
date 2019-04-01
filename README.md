@@ -42,6 +42,7 @@ Eurorack form factor
  * PT2399 occational latchup with modification
 ### ERRATA - Counter
 ### ERRATA - Bitcrunch
+ * SW 101 and SW105 should change footprint (too small for MT202)
 ## Issues and Notes
 ### Issues and Notes - PT2399
  * Replace 20k across Q203 w Yellow LED
