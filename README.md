@@ -104,3 +104,4 @@ The construction is inspired from
  - https://www.electronics-tutorials.ws/waveforms/555_oscillator.html (Counter clock)
  - https://www.electrosmash.com/pt2399-analysis (PT2399 Reverb)
  - http://sim.okawa-denshi.jp/en/OPttool.php (Filter calc for MFB filter)
+ - http://sim.okawa-denshi.jp/en/OPseikiLowkeisan.htm (Filter calc for Sallen Key filter (Out9 and Out10))
