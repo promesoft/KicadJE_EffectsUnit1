@@ -43,6 +43,7 @@ Eurorack form factor
 ### ERRATA - Counter
 ### ERRATA - Bitcrunch
  * SW 101 and SW105 should change footprint (too small for MT202)
+ * D110 and D111 is 0805 and cannot be fitted with SOD123
 ## Issues and Notes
 ### Issues and Notes - PT2399
  * Replace 20k across Q203 w Yellow LED
