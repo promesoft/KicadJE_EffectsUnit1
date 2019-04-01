@@ -22,7 +22,7 @@ Eurorack form factor
 | Initial Technical Test | Bitcrunch |  |
 | Initial Product Test | PT2399 | OK |
 | Initial Product Test | Counter | OK |
-| Initial Product Test | Bitcrunch  |  |
+| Initial Product Test | Bitcrunch  | OK - LFO w Distortion |
 | Initial Power Consumption | PT2399 | 40-60mA ! +12v depending on VCO circuit |
 | Initial Power Consumption | Counter | 20mA +12v  |
 | Initial Power Consumption | Bitcrunch | +12v +5v -12v |
@@ -30,9 +30,14 @@ Eurorack form factor
 ## Secondary validation
 | Test  | Detail | Status |
 | ------------- | ------------- |------------- |
-| Product Test |  | ok after mod |
+| Product Test | PT2399 | ok after mod |
+| Product Test | Counter | OK |
+| Product Test | LFO Distortion |  |
+| Product Test | Bitcrush Distortion |  |
 | Quality |  | ongoing |
-| Long Term Product Test | | Modded version installed in rack |
+| Long Term Product Test | PT2399 | Modded version installed in rack |
+| Long Term Product Test | Counter |  |
+| Long Term Product Test | Bitcrush |  |
 
 ## Errata
 ### ERRATA - PT2399
