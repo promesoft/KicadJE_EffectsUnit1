@@ -18,24 +18,30 @@ Eurorack form factor
 | ------------- | ------------- | ------------- |
 | Initial Inspection |  | OK |
 | Initial Technical Test | PT2399 | OK - See Errata |
-| Initial Technical Test |   |  |
-| Initial Technical Test |   |  |
-| Initial Product Test |   |  |
-| Initial Power Consumption | PT2399 | 40-60mA ! depending on VCO circuit |
-| Initial Power Consumption | Counter |  |
-| Initial Power Consumption | Bitcrunch |  |
+| Initial Technical Test | Counter  | OK |
+| Initial Technical Test | Bitcrunch |  |
+| Initial Product Test | PT2399 | OK |
+| Initial Product Test | Counter | OK |
+| Initial Product Test | Bitcrunch  |  |
+| Initial Power Consumption | PT2399 | 40-60mA ! +12v depending on VCO circuit |
+| Initial Power Consumption | Counter | 20mA +12v  |
+| Initial Power Consumption | Bitcrunch | +12v +5v -12v |
 
 ## Secondary validation
 | Test  | Detail | Status |
 | ------------- | ------------- |------------- |
-| Product Test |  | |
-| Quality |  | |
-| Long Term Product Test | |  |
+| Product Test |  | ok after mod |
+| Quality |  | ongoing |
+| Long Term Product Test | | Modded version installed in rack |
 
 ## Errata
 ### ERRATA - PT2399
  * 78L05 inv pinout
  * MMBT2222 wrong pinout - workaround flip and turn
+ * Delay time pot reversed
+ * PT2399 occational latchup with modification
+### ERRATA - Counter
+### ERRATA - Bitcrunch
 ## Issues and Notes
 ### Issues and Notes - PT2399
  * Replace 20k across Q203 w Yellow LED
@@ -43,6 +49,20 @@ Eurorack form factor
  * Move C222 across RV202 - move D2015 across R214 and remove Q202+R213
  * Consider Vactrol of RV202 and RV201
  * Consider +5V supply...
+### Issues and Notes - Counter
+ * Replace 100uF C310 with 10-22uF (consider a switch for next rev)
+ * Reset/Clk in Trigger not 5V tolerant
+ * Add I/O protection
+
+### Issues and Notes - Bit Crunch
+ * 11k = 10k
+ * 22k = 10k
+ * 33k = 10k
+ * 44k = 10k
+ * 11n = 100n
+ * 22n = 100n
+ * 33n = 100n
+ * 44n = 100n
  
 ### Workarounds
 
@@ -79,5 +99,8 @@ Practically it may be required to fit the bitcrusher and the distortion in one u
 ### Mechanical
 ![](EU1-MK1-mechanical.png)
 
-The construction is 
+The construction is inspired from
 -----------------------------------------------------
+ - https://www.electronics-tutorials.ws/waveforms/555_oscillator.html (Counter clock)
+ - https://www.electrosmash.com/pt2399-analysis (PT2399 Reverb)
+ - http://sim.okawa-denshi.jp/en/OPttool.php (Filter calc for MFB filter)
