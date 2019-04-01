@@ -6,8 +6,7 @@
  */ 
 
 #include "wavetable.h";
-//#include "globals.h";
-#include "midi.h";
+#include "globals.h";
 
 
 /* =====================================================
@@ -18,10 +17,10 @@ void setupDataStruct(){
      for (int j=0; j <= 3; j++){
       LEDData[i][j]=false;
      }
-     MIDI_CH[i] = EEPROM.read(i);
-     if (MIDI_CH[i] > 15) MIDI_CH[i] = 0;
-      updateLEDValue(MIDI_CH[i], i);
-      encoder[i] = MIDI_CH[i] << 2;
+     LFO_CH[i] = EEPROM.read(i);
+     if (LFO_CH[i] > 15) LFO_CH[i] = 0;
+      updateLEDValue(LFO_CH[i], i);
+      encoder[i] = LFO_CH[i] << 2;
    }
 }
 /* =====================================================
@@ -51,44 +50,28 @@ void setup() {
   pinMode(LED2, OUTPUT);
   pinMode(LED3, OUTPUT);
   pinMode(LED4, OUTPUT);
-  pinMode(LED_MIDI, OUTPUT);
-  pinMode(LED_CV1, OUTPUT);
-  pinMode(LED_CV2, OUTPUT);
-  pinMode(LED_LFO, OUTPUT);
+  pinMode(LED_Out6, OUTPUT);
+  pinMode(LED_Out9, OUTPUT);
+  pinMode(LED_Out10, OUTPUT);
+  pinMode(LED_Out11, OUTPUT);
     
   digitalWrite(LED1, HIGH);
   digitalWrite(LED2, HIGH);
   digitalWrite(LED3, HIGH);
   digitalWrite(LED4, HIGH);
-  digitalWrite(LED_MIDI, HIGH);
-  digitalWrite(LED_CV1, HIGH);
-  digitalWrite(LED_CV2, HIGH);
-  digitalWrite(LED_LFO, HIGH);
+  digitalWrite(LED_Out6, HIGH);
+  digitalWrite(LED_Out9, HIGH);
+  digitalWrite(LED_Out10, HIGH);
+  digitalWrite(LED_Out11, HIGH);
   delay(150);
 
   updateLED();
 
-/* =========Saw wave for table 1 =======================*/
-/*  for(int i=0; i<256; i++) {                                  // Precalculates a simple Tri-Wavetable in the first wavetable. Delete these 2 for-loops if you have filled up your wavetables 
-    waveTable[1][i]=i; 
-    }*/   
-/* =========Triangle wave for table 2===================*/
-/*  for(int i=0; i<128; i++) {                                  // Precalculates a simple Tri-Wavetable in the first wavetable. Delete these 2 for-loops if you have filled up your wavetables 
-    waveTable[2][i]=i*2; 
-    } 
-  for(int i=0; i<128; i++)  { 
-    waveTable[2][i+128]=256-i*2; 
-  } 
-  waveTable[2][128]=255;*/
-/* =========Step 8 wave table 3=========================*/
-/*  for(int i=0; i<256; i++) {                                  // Precalculates a simple Tri-Wavetable in the first wavetable. Delete these 2 for-loops if you have filled up your wavetables 
-    waveTable[3][i]=(i&0b11100000); 
-    }*/ 
 /* =========Setup LFO Output pins=======================*/
-  pinMode(PWM1, OUTPUT);                                           // Sets Pin PWM1 PWM-Output 
-  pinMode(PWM2, OUTPUT);                                           // Sets Pin PWM2 PWM-Output 
-  pinMode(Square, OUTPUT);                                          // Pin as LED for Tempo and as a square-LFO 
-  pinMode(InvSquare, OUTPUT);                                          // Pin as LED for Tempo and as a inverted square-LFO 
+  pinMode(LFO1, OUTPUT);                                           // Sets Pin 6 PWM1
+  pinMode(LFO2, OUTPUT);                                           // Sets Pin 9 PWM2
+  pinMode(LFO3, OUTPUT);                                           // Sets Pin 10 PWM3
+  pinMode(LFO4, OUTPUT);                                           // Sets Pin 11 PWM3
   
 /* =========Enable interrupt on A0,1,2==================*/
   // 1. PCIE1: Pin Change Interrupt Enable 1
@@ -96,10 +79,9 @@ void setup() {
   // Enable Pin Change Interrupt for A0, A1, A2
   PCMSK1 = 0b00000111; 
 
-//Safety before MIDI takes over so the arduino can be reprogrammed
-  delay(800); 
+  delay(100); 
 /* =====================================================*/
-  setupMidi();
+
 } 
 
 /* =====================================================
@@ -109,8 +91,7 @@ void loop() {
   checkencoder();                  //Check encoder and update values
 
   updateLED();                     //LED on for active state    
-  midiRead();
-  updateLEDValue(MIDI_CH[0], 0); //Update current midi chan for state 0
+  updateLEDValue(LFO_CH[0], 0); //Update current midi chan for state 0
   clearLED();                      //LED off (dim light)
 
   updatewave();
@@ -213,29 +194,29 @@ void updatewave(){
                                                                 bigger than 255, which is the lenght of the lookup table. 
                                                                  */ 
   /*  Serial.print(F("Delay time: "));
-    Serial.print(MIDI_CH[3]<<1);
+    Serial.print(LFO_CH[3]<<1);
     Serial.println(F(" "));*/
-    delayTime =  32 - (MIDI_CH[3]<<1);                                 // values from 0 to 15 shifted up 1 
+    delayTime =  32 - (LFO_CH[3]<<1);                                 // values from 0 to 15 shifted up 1 
                                                                 // multiplied by 2 as delay from sample to sample 
   /* ===========Update Square Output======================*/
     if(tableStep<128) {                                           // Turn LED on for first half of the cycle, indicate Tempo 
-      digitalWrite(Square, HIGH); 
-      digitalWrite(InvSquare, LOW); 
+      digitalWrite(LFO3, HIGH); 
+      digitalWrite(LFO4, LOW); 
     } 
     else {                                                        // Turn it off for the second half 
-      digitalWrite(Square, LOW); 
-      digitalWrite(InvSquare, HIGH); 
+      digitalWrite(LFO3, LOW); 
+      digitalWrite(LFO4, HIGH); 
     } 
   /* ===========Update PWM1 Output========================*/
-    PWMdata = getWaveSample(MIDI_CH[2]);
+    PWMdata = getWaveSample(LFO_CH[2]);
 
   //  analogWrite(PWM1, waveTable[PWMshape1][tableStep]);              // Writes the value at the current step in the table to Pin 5 as PWM-Signal.  
-    analogWrite(PWM1, PWMdata);
+    analogWrite(LFO1, PWMdata);
   
   /* ===========Update PWM2 Output========================*/
-    PWMdata = getWaveSample(0b00001111&(MIDI_CH[2]+4));
+    PWMdata = getWaveSample(0b00001111&(LFO_CH[2]+4));
   //  analogWrite(PWM2, waveTable[PWMshape2][tableStep]);              // Writes the value at the current step in the table to Pin 5 as PWM-Signal.  
-     analogWrite(PWM2, PWMdata);
+     analogWrite(LFO2, PWMdata);
   }
 }
 
@@ -247,18 +228,18 @@ void checkencoder(){
     left = false;
     if (encoder[state] != 0) encoder[state]--; // Decrement if not 0
     if (state < 4) {
-      if(((MIDI_CH[state]=encoder[state] >> 2) == 0) && state == 2) MIDI_CH[state]=16;
-      updateLEDValue(MIDI_CH[state], state);
-      EEPROM.write(state, MIDI_CH[state]);
+      if(((LFO_CH[state]=encoder[state] >> 2) == 0) && state == 2) LFO_CH[state]=16;
+      updateLEDValue(LFO_CH[state], state);
+      EEPROM.write(state, LFO_CH[state]);
     }
   }
   if (right){
     right = false;
     if (encoder[state] < 0x3f) encoder[state]++;
     if (state < 4) {
-      MIDI_CH[state]=encoder[state] >> 2;
-      updateLEDValue(MIDI_CH[state], state);
-      EEPROM.write(state, MIDI_CH[state]);
+      LFO_CH[state]=encoder[state] >> 2;
+      updateLEDValue(LFO_CH[state], state);
+      EEPROM.write(state, LFO_CH[state]);
     }
   }
   if (button){
@@ -318,10 +299,10 @@ void updateLED(){
   digitalWrite(LED3, LEDData[state][2]);
   digitalWrite(LED4, LEDData[state][3]);
   delay(1);
-  digitalWrite(LED_MIDI, state & B00000001);
-  digitalWrite(LED_CV1, state & B00000010);
-  digitalWrite(LED_CV2, state & B00000001);
-  digitalWrite(LED_LFO, state & B00000010);
+  digitalWrite(LED_Out6, state & B00000001);
+  digitalWrite(LED_Out9, state & B00000010);
+  digitalWrite(LED_Out10, state & B00000001);
+  digitalWrite(LED_Out11, state & B00000010);
 }
 
 void clearLED(){
@@ -329,16 +310,15 @@ void clearLED(){
   digitalWrite(LED2, LOW);
   digitalWrite(LED3, LOW);
   digitalWrite(LED4, LOW);
-  digitalWrite(LED_MIDI, LOW);
-  digitalWrite(LED_CV1, LOW);
-  digitalWrite(LED_CV2, LOW);
-  digitalWrite(LED_LFO, LOW);
+  digitalWrite(LED_Out6, LOW);
+  digitalWrite(LED_Out9, LOW);
+  digitalWrite(LED_Out10, LOW);
+  digitalWrite(LED_Out11, LOW);
 }
 
 /* =====================================================
 ==============Encoder change interrupt==================
 ======================================================*/  
-
 ISR (PCINT1_vect) {
 // If interrupt is triggered by the button
   boolean SW_val = digitalRead(SWpin);
