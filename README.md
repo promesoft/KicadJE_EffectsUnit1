@@ -39,6 +39,15 @@ Eurorack form factor
 | Long Term Product Test | Counter |  |
 | Long Term Product Test | Bitcrush |  |
 
+## Software 
+| Test  | Detail | Status |
+| ------------- | ------------- |------------- |
+| Initial SW | copy from MK1 and adjusted | OK! |
+| Bitcrush | UI | |
+| Bitcrush | Crush function | |
+| LFO Control | UI | Initial Modded from MIDI2CV |
+| LFO Control | Function | Initial taken from MIDI2CV |
+
 ## Errata
 ### ERRATA - PT2399
  * 78L05 inv pinout
