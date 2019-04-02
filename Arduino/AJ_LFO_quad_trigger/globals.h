@@ -39,7 +39,7 @@ boolean LEDSelData = false, LEDSel2Data = false;
 unsigned int encoder[4], buttoncnt = 0;
 unsigned int state = 0; 
 //For LFO - State 00 = Out6 - 01 = Out9 - 10 = Out10 - 11 = Out11
-byte LFO_CH[4][2]; //(see state above) [LFO Ch][Pin,State,Counter]
+byte LFO_CH[4][5]; //(see state above) [LFO Ch0-3] [State,Counter,LastUpdate,StepA4,DelayA5]
 boolean LEDData[4][4]; //(see state)
 
 unsigned long lastwaveupdate = 0; // LFO millis timer between samples

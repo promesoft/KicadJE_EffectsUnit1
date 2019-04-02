@@ -17,10 +17,10 @@ void setupDataStruct(){
      for (int j=0; j <= 3; j++){
       LEDData[i][j]=false;
      }
-     LFO_CH[i][1] = EEPROM.read(i);
-     if (LFO_CH[i] > 15) LFO_CH[i] = 0;
-      updateLEDValue(LFO_CH[i], i);
-      encoder[i] = LFO_CH[i] << 2;
+     LFO_CH[i][0] = EEPROM.read(i);              // LFO_CH[channel][state=0,counter=1]
+     if (LFO_CH[i][0] > 15) LFO_CH[i][0] = 0;
+      updateLEDValue(LFO_CH[i][0], i);
+      encoder[i] = LFO_CH[i][0] << 2;
    }
 }
 /* =====================================================
@@ -91,7 +91,7 @@ void loop() {
   checkencoder();                  //Check encoder and update values
 
   updateLED();                     //LED on for active state    
-  updateLEDValue(LFO_CH[0], 0); //Update current midi chan for state 0
+//  updateLEDValue(LFO_CH[0], 0); //Update current midi chan for state 0
   clearLED();                      //LED off (dim light)
 
   updatewave();
@@ -100,7 +100,7 @@ void loop() {
 /* =====================================================
 ==============Get Wave value based on shape=============
 ======================================================*/ 
-char getWaveSample(unsigned int PWMshape){
+char getWaveSample(byte PWMshape, byte tableStep){
     switch (PWMshape) {
       case 1:
         PWMdata = tableStep;
@@ -185,29 +185,37 @@ char getWaveSample(unsigned int PWMshape){
 ==============Update Wave data pointer==================
 ======================================================*/ 
 void updatewave(){
-  if ( millis() >= (lastwaveupdate+delayTime) ){
-    lastwaveupdate = millis();
-    tableStep++;                                                // Jumps to the next step. 
-                                                                /* tableStep is an 8-Bit unsigned integer, 
-                                                                so it can only store a value between 0 and 255 and will 
-                                                                automatically "overflow" and go back to 0 when it gets 
-                                                                bigger than 255, which is the lenght of the lookup table. 
-                                                                 */ 
-//    delayTime =  32 - (LFO_CH[3]<<1);                                 // values from 0 to 15 shifted up 1 
-    delayTime = (analogRead(LeftBottomPot)>>4);
-    tableStep = tableStep + (analogRead(LeftTopPot)>>4);
-
-  /* ===========Update PWM1 Output========================*/
-    PWMdata = getWaveSample(LFO_CH[0]);
-    analogWrite(LFO0, PWMdata);
+  LFO_CH[state][3] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
+  LFO_CH[state][4] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
+   for (int i=0; i <= 3; i++){                                // For each channel - i
+     if ( millis() >= (lastwaveupdate+delayTime) ){
+       PWMdata = getWaveSample(LFO_CH[i][0], LFO_CH[i][1]);   // getWaveSample(shape, tablestep)
+       analogWrite(LFO0, PWMdata);
+  
+       for (int j=0; j <= 3; j++){                              
+        LEDData[i][j]=false;
+       }
+     }
+   }
+      tableStep++;                                                // Jumps to the next step. 
+                                                                  /* tableStep is an 8-Bit unsigned integer, 
+                                                                  so it can only store a value between 0 and 255 and will 
+                                                                  automatically "overflow" and go back to 0 when it gets 
+                                                                  bigger than 255, which is the lenght of the lookup table. 
+                                                                   */ 
+      delayTime = 
+      LFO_CH[state][1] = LFO_CH[state][1] + LFO_CH[state][2] + 1;
+  
+  
+    /* ===========Update PWM1 Output========================*/
   /* ===========Update PWM2 Output========================*/
-    PWMdata = getWaveSample(LFO_CH[1]);
+    PWMdata = getWaveSample(LFO_CH[1][0], LFO_CH[1][1]);
     analogWrite(LFO1, PWMdata);
   /* ===========Update PWM2 Output========================*/
-    PWMdata = getWaveSample(LFO_CH[2]);
+    PWMdata = getWaveSample(LFO_CH[2][0], LFO_CH[2][1]);
     analogWrite(LFO2, PWMdata);
   /* ===========Update PWM2 Output========================*/
-    PWMdata = getWaveSample(LFO_CH[3]);
+    PWMdata = getWaveSample(LFO_CH[3][0], LFO_CH[3][1]);
     analogWrite(LFO3, PWMdata);
   }
 }
