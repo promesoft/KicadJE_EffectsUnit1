@@ -32,8 +32,9 @@ void setupDataStruct(){
      encoder[i] = LFO_CH[i][0] << 2;
      LFO_CH[i][1] = 0;              // [LFO Ch0-3]  [Counter]
      LFO_CH[i][2] = 0;              // [LFO Ch0-3]  [LastUpdate]
-     LFO_CH[i][5] = 0;              // [LFO Ch0-3]  [StepA4]
-     LFO_CH[i][6] = 1;              // [LFO Ch0-3]  [DelayA5]     
+     LFO_CH[i][5] = 1;              // [LFO Ch0-3]  [StepA4]
+     LFO_CH[i][6] = 1;              // [LFO Ch0-3]  [DelayA5]   
+     lastwaveupdate[i] = 0;  
    Serial.print("LFO");
    Serial.print(i);
    Serial.print(",");
@@ -217,9 +218,11 @@ void updatewave(){
   LFO_CH[state][5] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
   LFO_CH[state][6] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
    for (int i=0; i <= 3; i++){                                // For each channel - i
-     if ( millis() >= (LFO_CH[state][2]+LFO_CH[state][6]) ){
-       LFO_CH[state][2] = millis();                           // update "last update" for LFO_CH[state]
-       LFO_CH[state][1] = LFO_CH[state][1] + LFO_CH[state][5] + 1; // update next step in wave table
+     if ( millis() >= (lastwaveupdate[i]+LFO_CH[i][6]) ){
+//     if ( millis() >= (LFO_CH[i][2]+LFO_CH[i][6]) ){
+       lastwaveupdate[i] = millis();                          // update "last update" for LFO_CH[state]
+//       LFO_CH[i][2] = millis();                               // update "last update" for LFO_CH[state]
+       LFO_CH[i][1] = LFO_CH[i][1] + LFO_CH[i][5] + 1;        // update next step in wave table
        PWMdata = getWaveSample(LFO_CH[i][0], LFO_CH[i][1]);   // getWaveSample(shape, tablestep)
        analogWrite(LFO_CH[i][3], PWMdata);
      }
