@@ -4,10 +4,10 @@
  * -----------------------------------------------
  */
 //OVERRIDE PINS FOR LFO
-#define LFO0 6 // Sets Pin PWM1 = Out 6 (top right)
-#define LFO1 11 // Sets Pin PWM2 = Out 11 (mid right)
-#define LFO2 10 // Sets Pin PWM6 = Out 10 (top left)
-#define LFO3 9 // Sets Pin PWM4 = Out 9 (mid left)
+#define LFO0_pin 6 // Sets Pin PWM1 = Out 6 (top right)
+#define LFO1_pin 11 // Sets Pin PWM2 = Out 11 (mid right)
+#define LFO2_pin 10 // Sets Pin PWM6 = Out 10 (top left)
+#define LFO3_pin 9 // Sets Pin PWM4 = Out 9 (mid left)
 
 #define SWpin A0 //add 100nF to GND for debounce 
 #define Apin A1 //add 100nF to GND for debounce
@@ -39,10 +39,10 @@ boolean LEDSelData = false, LEDSel2Data = false;
 unsigned int encoder[4], buttoncnt = 0;
 unsigned int state = 0; 
 //For LFO - State 00 = Out6 - 01 = Out9 - 10 = Out10 - 11 = Out11
-byte LFO_CH[4][5]; //(see state above) [LFO Ch0-3] [State,Counter,LastUpdate,StepA4,DelayA5]
+byte LFO_CH[4][7]; //(see state above) [LFO Ch0-3] [State,Counter,LastUpdate,PWMpin,LEDpin,StepA4,DelayA5]
 boolean LEDData[4][4]; //(see state)
 
-unsigned long lastwaveupdate = 0; // LFO millis timer between samples
-unsigned int delayTime = 4; 
-uint8_t tableStep = 0;
+//unsigned long lastwaveupdate = 0; // LFO millis timer between samples
+//unsigned int delayTime = 4; 
+//uint8_t tableStep = 0;
 uint8_t PWMdata = 0;

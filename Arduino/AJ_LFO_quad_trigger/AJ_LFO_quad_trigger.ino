@@ -13,14 +13,43 @@
 ==============INIT DATA STRUCTURES======================
 ======================================================*/  
 void setupDataStruct(){
+   LFO_CH[0][3] = LFO0_pin;              // [LFO Ch0]  [PWMpin]
+   LFO_CH[0][4] = LED_Out6;              // [LFO Ch0]  [LEDpin] 
+   LFO_CH[1][3] = LFO1_pin;              // [LFO Ch1]  [PWMpin]
+   LFO_CH[1][4] = LED_Out9;              // [LFO Ch1]  [LEDpin] 
+   LFO_CH[2][3] = LFO2_pin;              // [LFO Ch2]  [PWMpin]
+   LFO_CH[2][4] = LED_Out10;             // [LFO Ch2]  [LEDpin] 
+   LFO_CH[3][3] = LFO3_pin;              // [LFO Ch3]  [PWMpin]
+   LFO_CH[3][4] = LED_Out11;             // [LFO Ch3]  [LEDpin] 
+   Serial.println("");
    for (int i=0; i <= 3; i++){
      for (int j=0; j <= 3; j++){
       LEDData[i][j]=false;
      }
-     LFO_CH[i][0] = EEPROM.read(i);              // LFO_CH[channel][state=0,counter=1]
+     LFO_CH[i][0] = EEPROM.read(i);              // [LFO Ch0-3]  [State,Counter,LastUpdate,PWMpin,LEDpin,StepA4,DelayA5]
      if (LFO_CH[i][0] > 15) LFO_CH[i][0] = 0;
-      updateLEDValue(LFO_CH[i][0], i);
-      encoder[i] = LFO_CH[i][0] << 2;
+     updateLEDValue(LFO_CH[i][0], i);
+     encoder[i] = LFO_CH[i][0] << 2;
+     LFO_CH[i][1] = 0;              // [LFO Ch0-3]  [Counter]
+     LFO_CH[i][2] = 0;              // [LFO Ch0-3]  [LastUpdate]
+     LFO_CH[i][5] = 0;              // [LFO Ch0-3]  [StepA4]
+     LFO_CH[i][6] = 1;              // [LFO Ch0-3]  [DelayA5]     
+   Serial.print("LFO");
+   Serial.print(i);
+   Serial.print(",");
+   Serial.print(LFO_CH[i][0]);
+   Serial.print(",");
+   Serial.print(LFO_CH[i][1]);
+   Serial.print(",");
+   Serial.print(LFO_CH[i][2]);
+   Serial.print(",");
+   Serial.print(LFO_CH[i][3]);
+   Serial.print(",");
+   Serial.print(LFO_CH[i][4]);
+   Serial.print(",");
+   Serial.print(LFO_CH[i][5]);
+   Serial.print(",");
+   Serial.println(LFO_CH[i][6]);
    }
 }
 /* =====================================================
@@ -68,10 +97,10 @@ void setup() {
   updateLED();
 
 /* =========Setup LFO Output pins=======================*/
-  pinMode(LFO0, OUTPUT);                                           // Sets Pin 6 PWM1
-  pinMode(LFO1, OUTPUT);                                           // Sets Pin 9 PWM2
-  pinMode(LFO2, OUTPUT);                                           // Sets Pin 10 PWM3
-  pinMode(LFO3, OUTPUT);                                           // Sets Pin 11 PWM3
+  pinMode(LFO0_pin, OUTPUT);                           // Sets Pin 6 PWM1
+  pinMode(LFO1_pin, OUTPUT);                           // Sets Pin 9 PWM2
+  pinMode(LFO2_pin, OUTPUT);                           // Sets Pin 10 PWM3
+  pinMode(LFO3_pin, OUTPUT);                           // Sets Pin 11 PWM3
 
 /* =========Enable interrupt on A0,1,2==================*/
   // 1. PCIE1: Pin Change Interrupt Enable 1
@@ -185,39 +214,16 @@ char getWaveSample(byte PWMshape, byte tableStep){
 ==============Update Wave data pointer==================
 ======================================================*/ 
 void updatewave(){
-  LFO_CH[state][3] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
-  LFO_CH[state][4] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
+  LFO_CH[state][5] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
+  LFO_CH[state][6] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
    for (int i=0; i <= 3; i++){                                // For each channel - i
-     if ( millis() >= (lastwaveupdate+delayTime) ){
+     if ( millis() >= (LFO_CH[state][2]+LFO_CH[state][6]) ){
+       LFO_CH[state][2] = millis();                           // update "last update" for LFO_CH[state]
+       LFO_CH[state][1] = LFO_CH[state][1] + LFO_CH[state][5] + 1; // update next step in wave table
        PWMdata = getWaveSample(LFO_CH[i][0], LFO_CH[i][1]);   // getWaveSample(shape, tablestep)
-       analogWrite(LFO0, PWMdata);
-  
-       for (int j=0; j <= 3; j++){                              
-        LEDData[i][j]=false;
-       }
+       analogWrite(LFO_CH[i][3], PWMdata);
      }
    }
-      tableStep++;                                                // Jumps to the next step. 
-                                                                  /* tableStep is an 8-Bit unsigned integer, 
-                                                                  so it can only store a value between 0 and 255 and will 
-                                                                  automatically "overflow" and go back to 0 when it gets 
-                                                                  bigger than 255, which is the lenght of the lookup table. 
-                                                                   */ 
-      delayTime = 
-      LFO_CH[state][1] = LFO_CH[state][1] + LFO_CH[state][2] + 1;
-  
-  
-    /* ===========Update PWM1 Output========================*/
-  /* ===========Update PWM2 Output========================*/
-    PWMdata = getWaveSample(LFO_CH[1][0], LFO_CH[1][1]);
-    analogWrite(LFO1, PWMdata);
-  /* ===========Update PWM2 Output========================*/
-    PWMdata = getWaveSample(LFO_CH[2][0], LFO_CH[2][1]);
-    analogWrite(LFO2, PWMdata);
-  /* ===========Update PWM2 Output========================*/
-    PWMdata = getWaveSample(LFO_CH[3][0], LFO_CH[3][1]);
-    analogWrite(LFO3, PWMdata);
-  }
 }
 
 /* =====================================================
@@ -228,18 +234,18 @@ void checkencoder(){
     left = false;
     if (encoder[state] != 0) encoder[state]--; // Decrement if not 0
     if (state < 4) {
-      if(((LFO_CH[state]=encoder[state] >> 2) == 0) && state == 2) LFO_CH[state]=16;
-      updateLEDValue(LFO_CH[state], state);
-      EEPROM.write(state, LFO_CH[state]);
+      if(((LFO_CH[state][0]=encoder[state] >> 2) == 0) && state == 2) LFO_CH[state][0]=16;
+      updateLEDValue(LFO_CH[state][0], state);
+      EEPROM.write(state, LFO_CH[state][0]);
     }
   }
   if (right){
     right = false;
     if (encoder[state] < 0x3f) encoder[state]++;
     if (state < 4) {
-      LFO_CH[state]=encoder[state] >> 2;
-      updateLEDValue(LFO_CH[state], state);
-      EEPROM.write(state, LFO_CH[state]);
+      LFO_CH[state][0]=encoder[state] >> 2;
+      updateLEDValue(LFO_CH[state][0], state);
+      EEPROM.write(state, LFO_CH[state][0]);
     }
   }
   if (button){
