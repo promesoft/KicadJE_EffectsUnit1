@@ -42,6 +42,7 @@ unsigned int state = 0;
 byte LFO_CH[4][7]; //(see state above) [LFO Ch0-3] [State,Counter,LastUpdate,PWMpin,LEDpin,StepA4,DelayA5]
 boolean LEDData[4][4]; //(see state)
 
+unsigned long lastbuttonupdate; // used for blinking
 unsigned long lastwaveupdate[4]; // LFO millis timer between samples for each channel (see state)
 //unsigned int delayTime = 4; 
 //uint8_t tableStep = 0;

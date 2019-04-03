@@ -103,6 +103,10 @@ void setup() {
   pinMode(LFO2_pin, OUTPUT);                           // Sets Pin 10 PWM3
   pinMode(LFO3_pin, OUTPUT);                           // Sets Pin 11 PWM3
 
+/* =========Setup Trigger Input pins====================*/
+  pinMode(RightCenterIn, INPUT);                       // Sets Pin 
+  pinMode(RightBottomIn, INPUT);                       // Sets Pin 
+  pinMode(LeftIn, INPUT);                              // Sets Pin 
 /* =========Enable interrupt on A0,1,2==================*/
   // 1. PCIE1: Pin Change Interrupt Enable 1
   PCICR =  0b00000010; 
@@ -122,7 +126,7 @@ void loop() {
 
   updateLED();                     //LED on for active state    
 //  updateLEDValue(LFO_CH[0], 0); //Update current midi chan for state 0
-  clearLED();                      //LED off (dim light)
+//  clearLED();                      //LED off (dim light)
 
   updatewave();
 }
@@ -215,20 +219,26 @@ char getWaveSample(byte PWMshape, byte tableStep){
 ==============Update Wave data pointer==================
 ======================================================*/ 
 void updatewave(){
-  LFO_CH[state][5] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
-  LFO_CH[state][6] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
-   for (int i=0; i <= 3; i++){                                // For each channel - i
-     if ( millis() >= (lastwaveupdate[i]+LFO_CH[i][6]) ){
-//     if ( millis() >= (LFO_CH[i][2]+LFO_CH[i][6]) ){
-       lastwaveupdate[i] = millis();                          // update "last update" for LFO_CH[state]
+  if ( millis() >= lastbuttonupdate + 1000 ){
+    LFO_CH[state][5] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
+    LFO_CH[state][6] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
+  }
+     for (int i=0; i <= 3; i++){                                // For each channel - i
+      if ( millis() >= (lastwaveupdate[i]+LFO_CH[i][6])+1 ){
+//      if ( millis() >= (LFO_CH[i][2]+LFO_CH[i][6]) ){
+        lastwaveupdate[i] = millis();                          // update "last update" for LFO_CH[state]
+        if ( millis() >= lastbuttonupdate + 5000 ){
+          if ( LFO_CH[i][1] < 128 ) digitalWrite(LFO_CH[i][4], HIGH);
+          if ( LFO_CH[i][1] >= 128 ) digitalWrite(LFO_CH[i][4], LOW);        
+        }
+
 //       LFO_CH[i][2] = millis();                               // update "last update" for LFO_CH[state]
-       LFO_CH[i][1] = LFO_CH[i][1] + LFO_CH[i][5] + 1;        // update next step in wave table
-       PWMdata = getWaveSample(LFO_CH[i][0], LFO_CH[i][1]);   // getWaveSample(shape, tablestep)
-       analogWrite(LFO_CH[i][3], PWMdata);
-     }
+        LFO_CH[i][1] = LFO_CH[i][1] + LFO_CH[i][5] + 1;        // update next step in wave table
+        PWMdata = getWaveSample(LFO_CH[i][0], LFO_CH[i][1]);   // getWaveSample(shape, tablestep)
+        analogWrite(LFO_CH[i][3], PWMdata);
+      }
    }
 }
-
 /* =====================================================
 ==============Check encoder interrupt===================
 ======================================================*/ 
@@ -256,6 +266,7 @@ void checkencoder(){
     buttoncnt++;
     buttoncnt = buttoncnt & B00000111;
     state = buttoncnt >> 1;
+    lastbuttonupdate = millis(); 
     }
 }
 /* =====================================================
@@ -308,10 +319,12 @@ void updateLED(){
   digitalWrite(LED3, LEDData[state][2]);
   digitalWrite(LED4, LEDData[state][3]);
   delay(1);
-  digitalWrite(LED_Out6, state == 0);
-  digitalWrite(LED_Out9, state == 1);
-  digitalWrite(LED_Out10, state == 2);
-  digitalWrite(LED_Out11, state == 3);
+  if ( millis() < lastbuttonupdate + 10000 ){
+    digitalWrite(LED_Out6, state == 0);
+    digitalWrite(LED_Out9, state == 1);
+    digitalWrite(LED_Out10, state == 2);
+    digitalWrite(LED_Out11, state == 3);
+  }
 }
 
 void clearLED(){
