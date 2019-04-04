@@ -45,8 +45,9 @@ Eurorack form factor
 | Initial SW | copy from MK1 and adjusted | OK! |
 | Bitcrush | UI | |
 | Bitcrush | Crush function | |
-| LFO Control | UI | Initial Modded from MIDI2CV |
-| LFO Control | Function | Initial taken from MIDI2CV |
+| LFO Control | UI | Individual speed and waveform impl |
+| LFO Control | Function | Individual LFO implemented |
+| LFO Control | Input | TBD |
 
 ## Errata
 ### ERRATA - PT2399
