@@ -3,6 +3,9 @@
  * Wavetable LFO inspiration: 
  * https://www.muffwiggler.com/forum/viewtopic.php?t=169706&sid=4b0d7d4af599d0df3e7b6fc29ece21b8 
  *  
+ *  TODO: 
+ *  Input triggers new counter reset
+ *  Save Pot state
  */ 
 
 #include "wavetable.h";
