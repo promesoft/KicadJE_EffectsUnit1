@@ -30,6 +30,8 @@ void setupDataStruct(){
       LEDData[i][j]=false;
      }
      LFO_CH[i][0] = EEPROM.read(i);              // [LFO Ch0-3]  [State,Counter,LastUpdate,PWMpin,LEDpin,StepA4,DelayA5]
+     LFO_CH[i][5] = EEPROM.read(i+StepA4EEPROM);              // [LFO Ch0-3]  [State,Counter,LastUpdate,PWMpin,LEDpin,StepA4,DelayA5]
+     LFO_CH[i][6] = EEPROM.read(i+StepA5EEPROM);              // [LFO Ch0-3]  [State,Counter,LastUpdate,PWMpin,LEDpin,StepA4,DelayA5]
      if (LFO_CH[i][0] > 15) LFO_CH[i][0] = 0;
      updateLEDValue(LFO_CH[i][0], i);
      encoder[i] = LFO_CH[i][0] << 2;
@@ -225,6 +227,8 @@ void updatewave(){
   if ( millis() >= lastbuttonupdate + 1000 ){
     LFO_CH[state][5] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
     LFO_CH[state][6] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
+    EEPROM.write(state+StepA4EEPROM, LFO_CH[state][5]);
+    EEPROM.write(state+StepA5EEPROM, LFO_CH[state][6]);
   }
      for (int i=0; i <= 3; i++){                                // For each channel - i
       if ( millis() >= (lastwaveupdate[i]+LFO_CH[i][6])+1 ){

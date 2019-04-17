@@ -28,6 +28,13 @@
 #define LED_Out10 12
 #define LED_Out11 8
 
+// EEPROM mem map
+// 0..3 State (LFO out waveform)
+// 4..7 + StepA4EEPROM A4 Pot value for state (state = LFO output port)
+// 8..11 + StepA5EEPROM A5 Pot value for state (state = LFO output port)
+
+#define StepA4EEPROM 4 //size of state
+#define StepA5EEPROM 8 //size of state + size of StepA4EEPROM
 /* -----------------------------------------------
  *  GLOBAL VAR
  * -----------------------------------------------
@@ -37,7 +44,7 @@ boolean left = false, right = false, button = false;
 
 boolean LEDSelData = false, LEDSel2Data = false; 
 unsigned int encoder[4], buttoncnt = 0;
-unsigned int state = 0; 
+unsigned int state = 0;  //(state = LFO output port)
 //For LFO - State 00 = Out6 - 01 = Out9 - 10 = Out10 - 11 = Out11
 byte LFO_CH[4][7]; //(see state above) [LFO Ch0-3] [State,Counter,LastUpdate,PWMpin,LEDpin,StepA4,DelayA5]
 boolean LEDData[4][4]; //(see state)
