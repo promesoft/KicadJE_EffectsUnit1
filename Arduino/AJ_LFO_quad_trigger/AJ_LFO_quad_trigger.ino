@@ -37,8 +37,8 @@ void setupDataStruct(){
      encoder[i] = LFO_CH[i][0] << 2;
      LFO_CH[i][1] = 0;              // [LFO Ch0-3]  [Counter]
      LFO_CH[i][2] = 0;              // [LFO Ch0-3]  [LastUpdate]
-     LFO_CH[i][5] = 1;              // [LFO Ch0-3]  [StepA4]
-     LFO_CH[i][6] = 1;              // [LFO Ch0-3]  [DelayA5]   
+     //LFO_CH[i][5] = 1;              // [LFO Ch0-3]  [StepA4]
+     //LFO_CH[i][6] = 1;              // [LFO Ch0-3]  [DelayA5]   
      lastwaveupdate[i] = 0;  
    Serial.print("LFO");
    Serial.print(i);
