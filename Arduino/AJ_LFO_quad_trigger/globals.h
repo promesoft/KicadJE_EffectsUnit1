@@ -1,6 +1,8 @@
 #include <EEPROM.h>
 /* -----------------------------------------------
  *  GLOBAL DEFINES
+ *  
+ *  HW PLATFORM = DIST-CRUSH
  * -----------------------------------------------
  */
 //OVERRIDE PINS FOR LFO
