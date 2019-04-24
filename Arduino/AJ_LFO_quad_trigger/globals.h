@@ -45,7 +45,7 @@ boolean A_old=0, B_old=1, SW_old=0;
 boolean left = false, right = false, button = false;
 
 boolean LEDSelData = false, LEDSel2Data = false; 
-byte laststep[4]; //check if trigger was activated
+byte trigger[4]; //check if trigger was activated
 unsigned int encoder[4], buttoncnt = 0; //Encoder control
 unsigned int state = 0;  //(state = LFO output port)
 //For LFO - State 00 = Out6 - 01 = Out9 - 10 = Out10 - 11 = Out11

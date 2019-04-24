@@ -249,9 +249,10 @@ void updatewave(){
 ==============Read Input Values=========================
 ======================================================*/ 
 void readinputs(){
-  unsigned int LFOTrig0 = analogRead(RightCenterIn)
-  unsigned int LFOTrig1 = analogRead(RightBottomIn)
-  unsigned int LFOTrig2 = analogRead(LeftIn)
+  unsigned int LFOTrig0 = analogRead(RightCenterIn);
+  unsigned int LFOTrig1 = analogRead(RightBottomIn);
+  unsigned int LFOTrig2 = analogRead(LeftIn);
+  
   if ( LFOTrig2 > 255 && trigger[2] == 0 ) {
     LFO_CH[2][1] = 0;
     LFO_CH[3][1] = 0;
@@ -271,6 +272,7 @@ void readinputs(){
   }
   else{
     if (LFOTrig1 < 255) trigger[1] = 0;
+  }
  
   if ( LFOTrig0 > 255 && trigger[0] == 0 ) {
     LFO_CH[0][1] = 0;
@@ -278,6 +280,7 @@ void readinputs(){
   }
   else{
     if (LFOTrig0 < 255) trigger[0] = 0;
+  }
 }
 
 /* =====================================================
