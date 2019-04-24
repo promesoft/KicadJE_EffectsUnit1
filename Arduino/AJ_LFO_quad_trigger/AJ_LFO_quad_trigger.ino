@@ -227,8 +227,6 @@ void updatewave(){
   if ( millis() >= lastbuttonupdate + 1000 ){
     LFO_CH[state][5] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
     LFO_CH[state][6] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
-    EEPROM.write(state+StepA4EEPROM, LFO_CH[state][5]);
-    EEPROM.write(state+StepA5EEPROM, LFO_CH[state][6]);
   }
      for (int i=0; i <= 3; i++){                                // For each channel - i
       if ( millis() >= (lastwaveupdate[i]+LFO_CH[i][6])+1 ){
@@ -272,6 +270,8 @@ void checkencoder(){
     button = false;    
     buttoncnt++;
     buttoncnt = buttoncnt & B00000111;
+    EEPROM.write(state+StepA4EEPROM, LFO_CH[state][5]);
+    EEPROM.write(state+StepA5EEPROM, LFO_CH[state][6]);
     state = buttoncnt >> 1;
     lastbuttonupdate = millis(); 
     }
