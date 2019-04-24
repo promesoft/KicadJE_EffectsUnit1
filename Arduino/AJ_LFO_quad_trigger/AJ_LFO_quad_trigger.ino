@@ -249,12 +249,12 @@ void updatewave(){
 ==============Read Input Values=========================
 ======================================================*/ 
 void readinputs(){
-  if (analogRead(LeftIn) > 255) {
+  if (analogRead(LeftIn) > 100) {
     LFO_CH[2][1] = 0;
     LFO_CH[3][1] = 0;
   }
-  if (analogRead(RightBottomIn) > 255) LFO_CH[1][1] = 0;
-  if (analogRead(RightCenterIn) > 255) LFO_CH[0][1] = 0;
+  if (analogRead(RightBottomIn) > 100) LFO_CH[1][1] = 0;
+  if (analogRead(RightCenterIn) > 100) LFO_CH[0][1] = 0;
 }
 
 /* =====================================================
