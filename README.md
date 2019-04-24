@@ -51,7 +51,7 @@ Eurorack form factor
 | Bitcrush | Crush function | |
 | LFO Control | UI | Individual speed and waveform impl |
 | LFO Control | Function | Individual LFO implemented |
-| LFO Control | Input | TBD |
+| LFO Control | Input | 3x Trigger done |
 
 ## Errata
 ### ERRATA - PT2399
