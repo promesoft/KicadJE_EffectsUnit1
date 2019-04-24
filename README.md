@@ -3,8 +3,8 @@ JE-EU1 - PT2399 based reverb - distortion units
 Eurorack form factor
 
 # MK1 Design
-## Status - Gerber done
-# Status - Preliminary tests
+## Status - operational
+# Status - Secondary tests
 ## Initial 
 | Stage  | Detail | Status |
 | ------------- | ------------- | ------------- |
@@ -32,12 +32,16 @@ Eurorack form factor
 | ------------- | ------------- |------------- |
 | Product Test | PT2399 | ok after mod |
 | Product Test | Counter | OK |
-| Product Test | LFO Distortion |  |
+| Product Test | LFO Distortion | OK - dist too much |
 | Product Test | Bitcrush Distortion |  |
-| Quality |  | ongoing |
+| Quality | LFO | good - distortion is questionable effect |
+| Quality | Bitcrush |  |
+| Quality | Counter | Good - needs input prot |
+| Quality | PT2399 | ongoing |
 | Long Term Product Test | PT2399 | Modded version installed in rack |
 | Long Term Product Test | Counter |  |
 | Long Term Product Test | Bitcrush |  |
+| Long Term Product Test | LFO |  |
 
 ## Software 
 | Test  | Detail | Status |
