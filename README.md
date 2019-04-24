@@ -39,9 +39,9 @@ Eurorack form factor
 | Quality | Counter | Good - needs input prot |
 | Quality | PT2399 | ongoing |
 | Long Term Product Test | PT2399 | Modded version installed in rack |
-| Long Term Product Test | Counter |  |
+| Long Term Product Test | Counter | installed in rack |
 | Long Term Product Test | Bitcrush |  |
-| Long Term Product Test | LFO |  |
+| Long Term Product Test | LFO | installed in rack |
 
 ## Software 
 | Test  | Detail | Status |
