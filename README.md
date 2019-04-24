@@ -81,6 +81,8 @@ LFO only values:
  * 22n = 100n
  * 33n = 100n
  * 44n = 100n
+ * D118 - D117 remove
+ * Optional D111 - D110
 Dist/Bitcrush values has been added to the sch
  * Move LED D114 closer to Out9
 
@@ -91,6 +93,9 @@ The idea is to have 3 different units.
 Practically it may be required to fit the bitcrusher and the distortion in one unit.
 ### Distortion base board with Arduino Bitcrusher
  - 16pin Europower connector
+ 
+![](dist_sch.png) 
+
 ### PT2399 base board 
  - 10pin Europower connector
  - BC547 or BC337 NPN and Zener 7v5 regulator followed by 78L05 regulator
