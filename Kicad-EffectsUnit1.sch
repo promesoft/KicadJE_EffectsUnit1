@@ -541,7 +541,7 @@ L Device:R_POT RV102
 U 1 1 5C7A3722
 P 5375 3400
 F 0 "RV102" H 5305 3446 50  0000 R CNN
-F 1 "10k_O11" H 5305 3355 50  0000 R CNN
+F 1 "20k_O11" H 5305 3355 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_China_RK09_Single_Vertical_AJ" H 5375 3400 50  0001 C CNN
 F 3 "~" H 5375 3400 50  0001 C CNN
 	1    5375 3400
@@ -552,7 +552,7 @@ L Device:R_POT RV101
 U 1 1 5C7A37D8
 P 5325 2225
 F 0 "RV101" V 5525 2300 50  0000 R CNN
-F 1 "10k_O6" V 5425 2200 50  0000 R CNN
+F 1 "20k_O6" V 5425 2200 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_China_RK09_Single_Vertical_AJ" H 5325 2225 50  0001 C CNN
 F 3 "~" H 5325 2225 50  0001 C CNN
 	1    5325 2225
@@ -1740,8 +1740,6 @@ Wire Wire Line
 Wire Wire Line
 	5475 2225 5575 2225
 Wire Wire Line
-	5575 2225 5575 2300
-Wire Wire Line
 	5625 3400 5625 3950
 Connection ~ 5625 3950
 Wire Wire Line
@@ -1839,11 +1837,6 @@ $EndComp
 Connection ~ 5125 2400
 Wire Wire Line
 	5125 2400 5125 2350
-Wire Wire Line
-	5525 2300 5575 2300
-Connection ~ 5575 2300
-Wire Wire Line
-	5575 2300 5575 2775
 $Comp
 L Device:LED D118
 U 1 1 5CD75860
@@ -2397,4 +2390,11 @@ Wire Wire Line
 	6450 4275 6500 4275
 Wire Wire Line
 	6500 4275 6500 4350
+Wire Wire Line
+	5525 2500 5575 2500
+Connection ~ 5575 2500
+Wire Wire Line
+	5575 2500 5575 2775
+Wire Wire Line
+	5575 2225 5575 2500
 $EndSCHEMATC
