@@ -169,12 +169,12 @@ $EndComp
 $Comp
 L 4xxx:4017 U303
 U 1 1 5C7AF44B
-P 5650 4725
-F 0 "U303" H 5650 5703 50  0000 C CNN
-F 1 "4017" H 5650 5612 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm" H 5650 4725 50  0001 C CNN
-F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf" H 5650 4725 50  0001 C CNN
-	1    5650 4725
+P 6300 4125
+F 0 "U303" H 6300 5103 50  0000 C CNN
+F 1 "4017" H 6300 5012 50  0000 C CNN
+F 2 "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm" H 6300 4125 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf" H 6300 4125 50  0001 C CNN
+	1    6300 4125
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -258,27 +258,9 @@ Wire Wire Line
 	1525 3400 1525 3475
 Wire Wire Line
 	1525 3775 1525 3850
-Wire Wire Line
-	1525 3850 2075 3850
 Connection ~ 2350 3850
 Wire Wire Line
 	2350 3850 2350 3800
-$Comp
-L Device:CP C?
-U 1 1 5C7BA0E3
-P 2075 4000
-AR Path="/5C7BA0E3" Ref="C?"  Part="1" 
-AR Path="/5C781441/5C7BA0E3" Ref="C310"  Part="1" 
-F 0 "C310" H 2025 4200 50  0000 L CNN
-F 1 "100uF 16v" H 1925 4300 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2113 3850 50  0001 C CNN
-F 3 "~" H 2075 4000 50  0001 C CNN
-	1    2075 4000
-	-1   0    0    1   
-$EndComp
-Connection ~ 2075 3850
-Wire Wire Line
-	2075 3850 2350 3850
 Wire Wire Line
 	2075 4200 2075 4150
 Connection ~ 2075 4200
@@ -374,7 +356,7 @@ Text GLabel 10050 1425 0    50   Input ~ 0
 ClockIn
 Wire Wire Line
 	10050 1425 10150 1425
-Text GLabel 5025 4225 0    50   Input ~ 0
+Text GLabel 5675 3625 0    50   Input ~ 0
 ClockIn
 $Comp
 L Device:LED D?
@@ -1029,25 +1011,25 @@ Wire Wire Line
 	9300 3575 9300 3975
 Connection ~ 9300 3575
 Connection ~ 10200 3600
-Text GLabel 6150 5125 2    50   Input ~ 0
+Text GLabel 6800 4525 2    50   Input ~ 0
 Out9
-Text GLabel 6150 5025 2    50   Input ~ 0
+Text GLabel 6800 4425 2    50   Input ~ 0
 Out8
-Text GLabel 6150 4925 2    50   Input ~ 0
+Text GLabel 6800 4325 2    50   Input ~ 0
 Out7
-Text GLabel 6150 4825 2    50   Input ~ 0
+Text GLabel 6800 4225 2    50   Input ~ 0
 Out6
-Text GLabel 6150 4625 2    50   Input ~ 0
+Text GLabel 6800 4025 2    50   Input ~ 0
 Out4
-Text GLabel 6150 4525 2    50   Input ~ 0
+Text GLabel 6800 3925 2    50   Input ~ 0
 Out3
-Text GLabel 6150 4425 2    50   Input ~ 0
+Text GLabel 6800 3825 2    50   Input ~ 0
 Out2
-Text GLabel 6150 4325 2    50   Input ~ 0
+Text GLabel 6800 3725 2    50   Input ~ 0
 Out1
-Text GLabel 6150 4725 2    50   Input ~ 0
+Text GLabel 6800 4125 2    50   Input ~ 0
 Out5
-Text GLabel 6150 4225 2    50   Input ~ 0
+Text GLabel 6800 3625 2    50   Input ~ 0
 Out0
 $Comp
 L Connector:AudioJack2_SwitchT J?
@@ -1109,85 +1091,81 @@ Wire Wire Line
 	9300 5100 9300 5500
 Connection ~ 9300 5100
 Connection ~ 10200 5125
-Text GLabel 5000 4525 0    50   Input ~ 0
+Text GLabel 5650 3925 0    50   Input ~ 0
 Reset
 Wire Wire Line
-	5025 4225 5150 4225
+	5675 3625 5800 3625
 Wire Wire Line
-	5000 4525 5150 4525
-Text GLabel 5550 3750 0    50   Input ~ 0
+	5650 3925 5800 3925
+Text GLabel 6200 3150 0    50   Input ~ 0
 +12Vc
 $Comp
 L power:GNDS #PWR?
 U 1 1 5C879D20
-P 5650 5675
+P 6300 5075
 AR Path="/5C879D20" Ref="#PWR?"  Part="1" 
 AR Path="/5D60ED9A/5C879D20" Ref="#PWR?"  Part="1" 
 AR Path="/5C781441/5C879D20" Ref="#PWR0124"  Part="1" 
-F 0 "#PWR0124" H 5650 5425 50  0001 C CNN
-F 1 "GNDS" H 5655 5502 50  0000 C CNN
-F 2 "" H 5650 5675 50  0001 C CNN
-F 3 "" H 5650 5675 50  0001 C CNN
-	1    5650 5675
+F 0 "#PWR0124" H 6300 4825 50  0001 C CNN
+F 1 "GNDS" H 6305 4902 50  0000 C CNN
+F 2 "" H 6300 5075 50  0001 C CNN
+F 3 "" H 6300 5075 50  0001 C CNN
+	1    6300 5075
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5650 5675 5650 5625
+	6300 5075 6300 5025
 Wire Wire Line
-	5650 3925 5650 3850
+	6300 3325 6300 3250
 Wire Wire Line
-	5650 3750 5550 3750
+	6300 3150 6200 3150
 $Comp
 L Switch:SW_SPDT SW?
 U 1 1 5C88D8DA
-P 4525 4325
+P 4800 3725
 AR Path="/5C88D8DA" Ref="SW?"  Part="1" 
 AR Path="/5C781441/5C88D8DA" Ref="SW301"  Part="1" 
-F 0 "SW301" H 4525 4000 50  0000 C CNN
-F 1 "Run" H 4525 4091 50  0000 C CNN
-F 2 "AJ-Dropbox-Kicad:SP1MS1" H 4525 4325 50  0001 C CNN
-F 3 "~" H 4525 4325 50  0001 C CNN
-	1    4525 4325
+F 0 "SW301" H 4800 3575 50  0000 C CNN
+F 1 "Run" H 4750 3650 50  0000 C CNN
+F 2 "AJ-Dropbox-Kicad:SP1MS1" H 4800 3725 50  0001 C CNN
+F 3 "~" H 4800 3725 50  0001 C CNN
+	1    4800 3725
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	5150 4325 4725 4325
 $Comp
 L Device:R R?
 U 1 1 5C8AA357
-P 4325 4000
+P 5000 3575
 AR Path="/5C8AA357" Ref="R?"  Part="1" 
 AR Path="/5C781441/5C8AA357" Ref="R311"  Part="1" 
-F 0 "R311" V 4118 4000 50  0000 C CNN
-F 1 "10k" V 4209 4000 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4255 4000 50  0001 C CNN
-F 3 "~" H 4325 4000 50  0001 C CNN
-	1    4325 4000
+F 0 "R311" V 5125 3800 50  0000 C CNN
+F 1 "47k" V 5125 3600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4930 3575 50  0001 C CNN
+F 3 "~" H 5000 3575 50  0001 C CNN
+	1    5000 3575
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GNDS #PWR?
 U 1 1 5C8AA43A
-P 4325 4525
+P 4600 4225
 AR Path="/5C8AA43A" Ref="#PWR?"  Part="1" 
 AR Path="/5D60ED9A/5C8AA43A" Ref="#PWR?"  Part="1" 
 AR Path="/5C781441/5C8AA43A" Ref="#PWR0125"  Part="1" 
-F 0 "#PWR0125" H 4325 4275 50  0001 C CNN
-F 1 "GNDS" H 4330 4352 50  0000 C CNN
-F 2 "" H 4325 4525 50  0001 C CNN
-F 3 "" H 4325 4525 50  0001 C CNN
-	1    4325 4525
+F 0 "#PWR0125" H 4600 3975 50  0001 C CNN
+F 1 "GNDS" H 4605 4052 50  0000 C CNN
+F 2 "" H 4600 4225 50  0001 C CNN
+F 3 "" H 4600 4225 50  0001 C CNN
+	1    4600 4225
 	1    0    0    -1  
 $EndComp
+Connection ~ 6300 3250
 Wire Wire Line
-	4325 3850 5650 3850
-Connection ~ 5650 3850
+	6300 3250 6300 3150
 Wire Wire Line
-	5650 3850 5650 3750
+	4600 3550 4600 3625
 Wire Wire Line
-	4325 4150 4325 4225
-Wire Wire Line
-	4325 4525 4325 4425
+	4600 3925 4600 3825
 Wire Wire Line
 	1875 1100 2150 1100
 Wire Wire Line
@@ -1282,4 +1260,132 @@ Text Label 3400 1600 0    50   ~ 0
 -12
 Text Label 3400 1750 0    50   ~ 0
 +12
+Text GLabel 7725 1750 0    50   Input ~ 0
+ClockIn
+Text GLabel 8575 1750 0    50   Input ~ 0
+Reset
+$Comp
+L Diode:1N5819 D?
+U 1 1 5CCD6095
+P 7900 1600
+F 0 "D?" V 7854 1679 50  0000 L CNN
+F 1 "1N5819" V 7945 1679 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7900 1425 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 7900 1600 50  0001 C CNN
+	1    7900 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N5819 D?
+U 1 1 5CCD6FDF
+P 7900 1900
+F 0 "D?" V 7854 1979 50  0000 L CNN
+F 1 "1N5819" V 7945 1979 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 7900 1725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 7900 1900 50  0001 C CNN
+	1    7900 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDS #PWR?
+U 1 1 5CCD768A
+P 7900 2050
+AR Path="/5CCD768A" Ref="#PWR?"  Part="1" 
+AR Path="/5D60ED9A/5CCD768A" Ref="#PWR?"  Part="1" 
+AR Path="/5C781441/5CCD768A" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7900 1800 50  0001 C CNN
+F 1 "GNDS" H 7905 1877 50  0000 C CNN
+F 2 "" H 7900 2050 50  0001 C CNN
+F 3 "" H 7900 2050 50  0001 C CNN
+	1    7900 2050
+	1    0    0    -1  
+$EndComp
+Text GLabel 7900 1450 0    50   Input ~ 0
++12Vc
+Wire Wire Line
+	7725 1750 7900 1750
+Connection ~ 7900 1750
+$Comp
+L Diode:1N5819 D?
+U 1 1 5CCE2123
+P 8750 1600
+F 0 "D?" V 8704 1679 50  0000 L CNN
+F 1 "1N5819" V 8795 1679 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 8750 1425 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 8750 1600 50  0001 C CNN
+	1    8750 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N5819 D?
+U 1 1 5CCE212D
+P 8750 1900
+F 0 "D?" V 8704 1979 50  0000 L CNN
+F 1 "1N5819" V 8795 1979 50  0000 L CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 8750 1725 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 8750 1900 50  0001 C CNN
+	1    8750 1900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GNDS #PWR?
+U 1 1 5CCE2137
+P 8750 2050
+AR Path="/5CCE2137" Ref="#PWR?"  Part="1" 
+AR Path="/5D60ED9A/5CCE2137" Ref="#PWR?"  Part="1" 
+AR Path="/5C781441/5CCE2137" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8750 1800 50  0001 C CNN
+F 1 "GNDS" H 8755 1877 50  0000 C CNN
+F 2 "" H 8750 2050 50  0001 C CNN
+F 3 "" H 8750 2050 50  0001 C CNN
+	1    8750 2050
+	1    0    0    -1  
+$EndComp
+Text GLabel 8750 1450 0    50   Input ~ 0
++12Vc
+Wire Wire Line
+	8575 1750 8750 1750
+Connection ~ 8750 1750
+Wire Wire Line
+	5000 3725 5800 3725
+Wire Wire Line
+	5000 3425 5000 3250
+Wire Wire Line
+	5000 3250 6300 3250
+Connection ~ 5000 3725
+Text GLabel 6800 4725 2    50   Input ~ 0
+OutCarry
+Text GLabel 4600 3550 1    50   Input ~ 0
+OutCarry
+$Comp
+L Device:R R?
+U 1 1 5CD1A27B
+P 4600 4075
+AR Path="/5CD1A27B" Ref="R?"  Part="1" 
+AR Path="/5C781441/5CD1A27B" Ref="R?"  Part="1" 
+F 0 "R?" V 4393 4075 50  0000 C CNN
+F 1 "10k" V 4484 4075 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4530 4075 50  0001 C CNN
+F 3 "~" H 4600 4075 50  0001 C CNN
+	1    4600 4075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1525 3850 2075 3850
+$Comp
+L Device:C C?
+U 1 1 5CD1AA3C
+P 2075 4000
+AR Path="/5CD1AA3C" Ref="C?"  Part="1" 
+AR Path="/5C781441/5CD1AA3C" Ref="C?"  Part="1" 
+F 0 "C?" H 1975 4150 50  0000 L CNN
+F 1 "10u" H 1975 4250 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2113 3850 50  0001 C CNN
+F 3 "~" H 2075 4000 50  0001 C CNN
+	1    2075 4000
+	-1   0    0    1   
+$EndComp
+Connection ~ 2075 3850
+Wire Wire Line
+	2075 3850 2350 3850
 $EndSCHEMATC

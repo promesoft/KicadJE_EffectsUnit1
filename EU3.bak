@@ -6,10 +6,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 3
 Title "Clock and Counter - CNC"
-Date "2019-02-25"
-Rev "Rev A"
-Comp "Johansen Engineering"
-Comment1 ""
+Date "2019-04-25"
+Rev "Rev B"
+Comp "Promesoft"
+Comment1 "Johansen Engineering"
 Comment2 ""
 Comment3 ""
 Comment4 ""

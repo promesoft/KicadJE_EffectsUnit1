@@ -6,8 +6,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 3
 Title "Effects Unit 1"
-Date "2019-02-05"
-Rev "Rev 1"
+Date "2019-04-25"
+Rev "Rev B"
 Comp "Promesoft"
 Comment1 "Johansen Engineering"
 Comment2 ""
@@ -1591,12 +1591,12 @@ $EndComp
 $Comp
 L power:GND #PWR0110
 U 1 1 5D28C9A9
-P 6150 4350
-F 0 "#PWR0110" H 6150 4100 50  0001 C CNN
-F 1 "GND" H 6155 4177 50  0000 C CNN
-F 2 "" H 6150 4350 50  0001 C CNN
-F 3 "" H 6150 4350 50  0001 C CNN
-	1    6150 4350
+P 6500 4350
+F 0 "#PWR0110" H 6500 4100 50  0001 C CNN
+F 1 "GND" H 6505 4177 50  0000 C CNN
+F 2 "" H 6500 4350 50  0001 C CNN
+F 3 "" H 6500 4350 50  0001 C CNN
+	1    6500 4350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -1878,10 +1878,8 @@ Text GLabel 6200 2775 2    50   Input ~ 0
 Out6Dist
 Text GLabel 6250 3950 2    50   Input ~ 0
 Out11Dist
-Text GLabel 6350 5350 2    50   Input ~ 0
+Text GLabel 6625 5350 2    50   Input ~ 0
 Out10Dist
-Wire Wire Line
-	6150 4275 6150 4350
 Wire Wire Line
 	2125 5600 2125 5575
 Wire Wire Line
@@ -2151,8 +2149,8 @@ $Comp
 L Switch:SW_DPDT_x2 SW105
 U 2 1 5D49153E
 P 6225 5550
-F 0 "SW105" V 6179 5698 50  0000 L CNN
-F 1 "Dist 10" V 6270 5698 50  0000 L CNN
+F 0 "SW105" V 6175 5325 50  0000 L CNN
+F 1 "Dist 10" V 6250 5325 50  0000 L CNN
 F 2 "AJ-Dropbox-Kicad:SPDTx2" H 6225 5550 50  0001 C CNN
 F 3 "~" H 6225 5550 50  0001 C CNN
 	2    6225 5550
@@ -2193,22 +2191,14 @@ Wire Wire Line
 $Comp
 L Device:R R134
 U 1 1 5D4EE5BD
-P 6325 5950
-F 0 "R134" H 6150 6025 50  0000 C CNN
-F 1 "10k" H 6150 5950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6255 5950 50  0001 C CNN
-F 3 "~" H 6325 5950 50  0001 C CNN
-	1    6325 5950
+P 6500 5600
+F 0 "R134" H 6325 5675 50  0000 C CNN
+F 1 "10k" H 6400 5800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6430 5600 50  0001 C CNN
+F 3 "~" H 6500 5600 50  0001 C CNN
+	1    6500 5600
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	6325 5750 6325 5800
-Wire Wire Line
-	6175 5800 6250 5800
-Wire Wire Line
-	6250 5800 6250 6100
-Wire Wire Line
-	6250 6100 6325 6100
 Connection ~ 6175 5800
 $Comp
 L power:GND #PWR0119
@@ -2224,8 +2214,6 @@ $EndComp
 Connection ~ 6100 6100
 Wire Wire Line
 	6100 6100 6175 6100
-Wire Wire Line
-	6225 5350 6350 5350
 Wire Wire Line
 	1850 5350 1850 5375
 $Comp
@@ -2259,7 +2247,7 @@ L Device:R_POT RV104
 U 1 1 5C70D724
 P 7900 5075
 F 0 "RV104" V 7525 5225 50  0000 R CNN
-F 1 "10k_A4" V 7625 5250 50  0000 R CNN
+F 1 "100k_A4" V 7625 5250 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_China_RK09_Single_Vertical_AJ" H 7900 5075 50  0001 C CNN
 F 3 "~" H 7900 5075 50  0001 C CNN
 	1    7900 5075
@@ -2272,7 +2260,7 @@ L Device:R_POT RV105
 U 1 1 5C72E266
 P 7900 5625
 F 0 "RV105" V 7750 5800 50  0000 R CNN
-F 1 "10k_A5" V 7675 5700 50  0000 R CNN
+F 1 "100k_A5" V 7675 5700 50  0000 R CNN
 F 2 "Potentiometer_THT:Potentiometer_China_RK09_Single_Vertical_AJ" H 7900 5625 50  0001 C CNN
 F 3 "~" H 7900 5625 50  0001 C CNN
 	1    7900 5625
@@ -2383,4 +2371,30 @@ U 5C781441
 F0 "EU3" 50
 F1 "EU3.sch" 50
 $EndSheet
+Wire Wire Line
+	6500 5800 6500 5750
+Wire Wire Line
+	6500 5450 6500 5350
+Wire Wire Line
+	6175 5800 6500 5800
+Wire Wire Line
+	6225 5350 6500 5350
+Wire Wire Line
+	6625 5350 6500 5350
+Connection ~ 6500 5350
+$Comp
+L Device:R R?
+U 1 1 5CCAB2D3
+P 6300 4275
+F 0 "R?" H 6125 4350 50  0000 C CNN
+F 1 "10k" H 6200 4475 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 6230 4275 50  0001 C CNN
+F 3 "~" H 6300 4275 50  0001 C CNN
+	1    6300 4275
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6450 4275 6500 4275
+Wire Wire Line
+	6500 4275 6500 4350
 $EndSCHEMATC
