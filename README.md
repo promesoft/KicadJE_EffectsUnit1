@@ -3,8 +3,8 @@ JE-EU1 - PT2399 based reverb - distortion units
 Eurorack form factor
 
 # MK1 Design
-## Status - Gerber done
-# Status - Preliminary tests
+## Status - operational
+# Status - Secondary tests
 ## Initial 
 | Stage  | Detail | Status |
 | ------------- | ------------- | ------------- |
@@ -26,18 +26,23 @@ Eurorack form factor
 | Initial Power Consumption | PT2399 | 40-60mA ! +12v depending on VCO circuit |
 | Initial Power Consumption | Counter | 20mA +12v  |
 | Initial Power Consumption | Bitcrunch | +12v +5v -12v |
+| Initial Power Consumption | LFO | +12v +5v -12v |
 
 ## Secondary validation
 | Test  | Detail | Status |
 | ------------- | ------------- |------------- |
 | Product Test | PT2399 | ok after mod |
 | Product Test | Counter | OK |
-| Product Test | LFO Distortion |  |
+| Product Test | LFO Distortion | OK - dist too much |
 | Product Test | Bitcrush Distortion |  |
-| Quality |  | ongoing |
+| Quality | LFO | good - distortion is questionable effect |
+| Quality | Bitcrush |  |
+| Quality | Counter | Good - needs input prot |
+| Quality | PT2399 | ongoing |
 | Long Term Product Test | PT2399 | Modded version installed in rack |
-| Long Term Product Test | Counter |  |
+| Long Term Product Test | Counter | installed in rack |
 | Long Term Product Test | Bitcrush |  |
+| Long Term Product Test | LFO | installed in rack |
 
 ## Software 
 | Test  | Detail | Status |
@@ -47,7 +52,7 @@ Eurorack form factor
 | Bitcrush | Crush function | |
 | LFO Control | UI | Individual speed and waveform impl |
 | LFO Control | Function | Individual LFO implemented |
-| LFO Control | Input | TBD |
+| LFO Control | Input | 3x Trigger done |
 
 ## Errata
 ### ERRATA - PT2399
@@ -81,6 +86,8 @@ LFO only values:
  * 22n = 100n
  * 33n = 100n
  * 44n = 100n
+ * D118 - D117 remove
+ * Optional D111 - D110
 Dist/Bitcrush values has been added to the sch
  * Move LED D114 closer to Out9
 
@@ -91,6 +98,9 @@ The idea is to have 3 different units.
 Practically it may be required to fit the bitcrusher and the distortion in one unit.
 ### Distortion base board with Arduino Bitcrusher
  - 16pin Europower connector
+ 
+![](dist_sch.png) 
+
 ### PT2399 base board 
  - 10pin Europower connector
  - BC547 or BC337 NPN and Zener 7v5 regulator followed by 78L05 regulator
