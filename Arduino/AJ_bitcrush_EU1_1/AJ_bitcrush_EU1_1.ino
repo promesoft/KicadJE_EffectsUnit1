@@ -137,15 +137,15 @@ void loop() {
 void updatewave(){
   unsigned int LFOTrig0 = analogRead(RightCenterIn);
 //  unsigned int LFOTrig1 = analogRead(RightBottomIn);
-//  unsigned int LFOTrig2 = analogRead(LeftIn);
-  if ( millis() >= lastbuttonupdate + 1000 ){
+  unsigned int LFOTrig2 = analogRead(LeftIn);
+/*  if ( millis() >= lastbuttonupdate + 1000 ){
     LFO_CH[state][5] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
     LFO_CH[state][6] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
-  }
+  }*/
   analogWrite(LFO0_pin, LFOTrig0);
   analogWrite(LFO1_pin, LFOTrig0);
-  analogWrite(LFO2_pin, LFOTrig0);
-  analogWrite(LFO3_pin, LFOTrig0);
+  analogWrite(LFO2_pin, LFOTrig2);
+  analogWrite(LFO3_pin, LFOTrig2);
 //        analogWrite(LFO_CH[i][3], PWMdata);
 }
 /* =====================================================
