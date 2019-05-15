@@ -142,10 +142,10 @@ void updatewave(){
     LFO_CH[state][5] = (analogRead(LeftBottomPot)>>4);          // Update Step Len
     LFO_CH[state][6] = (analogRead(LeftTopPot)>>4);             // Update Delay Time
   }*/
-  analogWrite(LFO0_pin, (LFOTrig0 && LFO_CH[0][0]));
-  analogWrite(LFO1_pin, (LFOTrig0 && LFO_CH[1][0]));
-  analogWrite(LFO2_pin, (LFOTrig2 && LFO_CH[2][0]));
-  analogWrite(LFO3_pin, (LFOTrig2 && LFO_CH[3][0]));
+  analogWrite(LFO0_pin, (LFOTrig0 & (0xF0 | LFO_CH[0][0])));
+  analogWrite(LFO1_pin, (LFOTrig0 & (0xF0 | LFO_CH[1][0])));
+  analogWrite(LFO2_pin, (LFOTrig2 & (0xF0 | LFO_CH[2][0])));
+  analogWrite(LFO3_pin, (LFOTrig2 & (0xF0 | LFO_CH[3][0])));
 //        analogWrite(LFO_CH[i][3], PWMdata);
 }
 /* =====================================================
