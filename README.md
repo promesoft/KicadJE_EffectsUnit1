@@ -60,6 +60,7 @@ Eurorack form factor
  * MMBT2222 wrong pinout - workaround flip and turn
  * Delay time pot reversed
  * PT2399 occational latchup with modification
+ * SW101 and S105W are wired wrong to enable Dist on/off
 ### ERRATA - Counter
 ### ERRATA - Bitcrunch
  * SW 101 and SW105 should change footprint (too small for MT202)
